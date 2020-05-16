@@ -15,6 +15,8 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="shortcut icon" href="ico/favicon.ico">
+    <link rel="stylesheet" href="css/font-awesome.css">
+    <link rel="stylesheet" type="text-css" href="css/bootstrap-social.scss">
 
     <title>TFG</title>
     <style>
@@ -30,8 +32,8 @@
         #icono {
             width: 90%;
             height: 140%;
-           margin-left: -150px;
-           margin-bottom: -120px ;
+            margin-left: -150px;
+            margin-bottom: -120px;
         }
 
         #titulo {
@@ -39,44 +41,6 @@
             margin-left: -50%;
             color: white;
             font-size: 170%;
-
-        }
-
-        #menu {
-            background-color: black;
-            color: white;
-            border: none;
-            margin-left: -100%;
-            font-size: 125%;
-            margin-top: 20%;
-        }
-
-        #desplegable {
-            background-color: black;
-            color: white;
-        }
-
-        a {
-            color: white
-        }
-
-        a:hover {
-            color: rgb(214, 214, 11);
-        }
-
-        li {
-            list-style: none;
-        }
-
-        #registro {
-            color: white;
-            margin-left: -10%;
-            font-size: 125%;
-
-        }
-
-        #registro:hover {
-            color: rgb(214, 214, 11);
 
         }
 
@@ -89,7 +53,7 @@
             background: -ms-linear-gradient(left, rgba(0, 0, 0, 1) 0%, rgba(212, 186, 82, 1) 29%, rgba(240, 218, 105, 1) 54%, rgba(236, 236, 123, 1) 76%, rgba(235, 239, 123, 1) 100%);
             background: linear-gradient(to right, rgba(0, 0, 0, 1) 0%, rgba(212, 186, 82, 1) 29%, rgba(240, 218, 105, 1) 54%, rgba(236, 236, 123, 1) 76%, rgba(235, 239, 123, 1) 100%);
             filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#000000', endColorstr='#ebef7b', GradientType=1);
-        
+
         }
 
         #boton {
@@ -109,12 +73,27 @@
             color: white;
         }
 
-        #inicio {
+        .boton-cards {
+            border-radius: 5.5px;
+            width: 200px;
+            height: 60px;
+            color: black;
+            background-color: rgb(236, 236, 123);
             border-color: black;
-            margin-right: 100px;
-            color: black !important;
-            background-color: white;
+            font-size: 20px;
         }
+
+        .rrss a {
+            display: inline;
+        }
+        .modal-content{
+            color: black;
+            background-color: rgb(236, 236, 123);
+            border-color: black;
+            font-size: 20px;
+        }
+        
+        
     </style>
 </head>
 
@@ -125,34 +104,39 @@
             <div class="col-md-2"><img src="images/Logo.png" id="icono" /></div>
             <div class="col-md-2" style="margin-top: 2%;"><span id="titulo">Titulo del proyecto</span></div>
             <div class="col-lg-1 col-md-1 col-sm-1">
-                <div class="dropdown">
-                    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown"
-                        id="menu">Cursos
-                        <span class="caret"></span></button>
-                    <ul class="dropdown-menu" id="desplegable">
-                        <li><a href="#">Diseño de Moda</a></li>
-                        <li><a href="#">Corte y Confeccion</a></li>
-                        <li><a href="#">Patronaje</a></li>
-                        <li><a href="#">Modelaje</a></li>
-                    </ul>
-                </div>
             </div>
             <div class="col-lg-1 col-md-1 col-sm-1">
-                <div class="dropdown">
-                    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown"
-                        id="menu">Contacta con Nosotros
-                        <span class="caret"></span></button>
-                    <ul class="dropdown-menu" id="desplegable">
-                        <li>999999999</li>
-                        <li>correo@correo.es</li>
-
-                    </ul>
-                </div>
             </div>
-            <div class="col-md-1" style="margin-top: 1.5%;"><a href="#" id="registro">Registrarse</a></div>
             <div class="col-md-2">&nbsp</div>
-            <div class="col-md-2" id="boton"><a href="#">¿Has olvidado tu contraseña?</a><button id="boton">Iniciar
-                    Sesion</button></div>
+                <button type="button" id="boton" data-toggle="modal" data-target="#exampleModal"data-whatever="@mdo">Inicio/Registro</button>
+                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h4 class="modal-title" id="exampleModalLabel">Bienvenido</h4>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <form>
+                                    <div class="form-group">
+                                        <label for="recipient-name" class="col-form-label">Usuario:</label>
+                                        <input type="text" class="form-control" id="recipient-name">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="message-text" class="col-form-label">Contraseña:</label>
+                                        <input type="text" class="form-control" id="recipient-name">
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" id="boton" data-dismiss="modal">Registro</button>
+                                <button type="button" id="boton">Iniciar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>  
         </div>
         <div class="row" id="contenido">
             <div class="col-md-1">&nbsp;</div>
@@ -162,6 +146,7 @@
                     <h5 class="card-title">Patronaje</h5>
                     <p class="card-text">Aqui iria una breve explicacion de lo que trata el curso y de los contenidos y
                         aprendizajes que se llevan acabo en el.</p>
+                    <button class="boton-cards">Ir al curso</button>
                 </div>
             </div>
             <div class="col-md-1">&nbsp;</div>
@@ -171,6 +156,7 @@
                     <h5 class="card-title">Diseño de moda</h5>
                     <p class="card-text">Aqui iria una breve explicacion de lo que trata el curso y de los contenidos y
                         aprendizajes que se llevan acabo en el.</p>
+                    <button class="boton-cards">Ir al curso</button>
                 </div>
             </div>
             <div class="col-md-1">&nbsp;</div>
@@ -180,6 +166,7 @@
                     <h5 class="card-title">Corte y Confeccion</h5>
                     <p class="card-text">Aqui iria una breve explicacion de lo que trata el curso y de los contenidos y
                         aprendizajes que se llevan acabo en el.</p>
+                    <button class="boton-cards">Ir al curso</button>
                 </div>
             </div>
             <div class="col-md-1">&nbsp;</div>
@@ -189,13 +176,28 @@
                     <h5 class="card-title">Modelaje</h5>
                     <p class="card-text">Aqui iria una breve explicacion de lo que trata el curso y de los contenidos y
                         aprendizajes que se llevan acabo en el.</p>
+                    <button class="boton-cards">Ir al curso</button>
                 </div>
             </div>
         </div>
 
-        <div class="fixed-bottom" style="background-color: black; color:rgb(97, 96, 96); text-align: center;">&copy;2020-2021 TFG DESARROLLO DE
+        <div class="fixed-bottom" style="background-color: black; color:rgb(97, 96, 96); text-align: center;">
+            &copy;2020-2021 TFG DESARROLLO DE
             APLICACIONES
-            WEB todos los derechos reservados </div>
+            WEB todos los derechos reservados
+            <div class="rrss">
+                <a class="btn btn-block btn-social btn-twitter">
+                    <span class="fa fa-twitter"></span> Siguenos en Twitter
+                </a>
+                <a class="btn btn-block btn-social btn-twitter">
+                    <span class="fa fa-facebook"></span> Siguenos en Facebook
+                </a>
+                <a class="btn btn-block btn-social btn-twitter">
+                    <span class="fa fa-instagram"></span> Siguenos en instagram
+                </a>
+            </div>
+
+        </div>
 
     </div>
 
