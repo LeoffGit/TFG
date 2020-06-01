@@ -17,16 +17,9 @@
     <link rel="shortcut icon" href="ico/favicon.ico">
     <link rel="stylesheet" href="css/font-awesome.css">
     <link rel="stylesheet" type="text-css" href="css/bootstrap-social.scss">
-    <link rel="stylesheet" type="text/css" href="fonts/Leixo.ttf">
-
 
     <title>TFG</title>
     <style>
-        @font-face {
-            font-family: Leixo;
-            src: url(fonts/Leixo.ttf);
-        }
-
         body {
             background: rgb(236, 236, 123);
         }
@@ -48,7 +41,6 @@
             margin-left: -50%;
             color: white;
             font-size: 170%;
-            font-family: Leixo;
 
         }
 
@@ -94,13 +86,14 @@
         .rrss a {
             display: inline;
         }
-
-        .modal-content {
+        .modal-content{
             color: black;
             background-color: rgb(236, 236, 123);
             border-color: black;
             font-size: 20px;
         }
+
+
     </style>
 </head>
 
@@ -109,84 +102,50 @@
         <div class="row" id="barra">
             <div class="col-md-1">&nbsp</div>
             <div class="col-md-2"><img src="images/Logo.png" id="icono" /></div>
-            <div class="col-md-2" style="margin-top: 2%;"><span id="titulo">Lerning Sewing Desing</span></div>
+            <div class="col-md-2" style="margin-top: 2%;"><span id="titulo">Titulo del proyecto</span></div>
             <div class="col-lg-1 col-md-1 col-sm-1">
             </div>
             <div class="col-lg-1 col-md-1 col-sm-1">
             </div>
             <div class="col-md-2">&nbsp</div>
-            <button type="button" id="boton" data-toggle="modal" data-target="#exampleModal"
-                data-whatever="@mdo">Inicio/Registro</button>
-            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-                aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h4 class="modal-title" id="exampleModalLabel">Bienvenido</h4>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                        </div>
-                        <div class="modal-body">
-                            <form>
-                                <div class="form-group">
-                                    <label for="recipient-name" class="col-form-label">Usuario:</label>
-                                    <input type="text" class="form-control" id="recipient-name">
-                                </div>
-                                <div class="form-group">
-                                    <label for="message-text" class="col-form-label">Contraseña:</label>
-                                    <input type="text" class="form-control" id="recipient-name">
-                                </div>
-                            </form>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" id="boton" data-dismiss="modal">Registro</button>
-                            <button type="button" id="boton">Iniciar</button>
+                <button type="button" id="boton" data-toggle="modal" data-target="#exampleModal"data-whatever="@mdo">Inicio/Registro</button>
+                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h4 class="modal-title" id="exampleModalLabel">Bienvenido</h4>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <form>
+                                    <div class="form-group">
+                                        <label for="recipient-name" class="col-form-label">Usuario:</label>
+                                        <input type="text" class="form-control" id="recipient-name">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="message-text" class="col-form-label">Contraseña:</label>
+                                        <input type="text" class="form-control" id="recipient-name">
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" id="boton" data-dismiss="modal">Registro</button>
+                                <button type="button" id="boton">Iniciar</button>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
         </div>
-        <div class="row" id="contenido">
-            <div class="col-md-1">&nbsp;</div>
-            <div class="card">
-                <img src="images/logo2.jpg" class="card-img-top" alt="foto">
-                <div class="card-body">
-                    <h5 class="card-title">Patronaje</h5>
-                    <p class="card-text">Aqui iria una breve explicacion de lo que trata el curso y de los contenidos y
-                        aprendizajes que se llevan acabo en el.</p>
-                    <button class="boton-cards">Ir al curso</button>
-                </div>
-            </div>
-            <div class="col-md-1">&nbsp;</div>
-            <div class="card">
-                <img src="images/logo2.jpg" class="card-img-top" alt="foto">
-                <div class="card-body">
-                    <h5 class="card-title">Diseño de moda</h5>
-                    <p class="card-text">Aqui iria una breve explicacion de lo que trata el curso y de los contenidos y
-                        aprendizajes que se llevan acabo en el.</p>
-                    <button class="boton-cards">Ir al curso</button>
-                </div>
-            </div>
-            <div class="col-md-1">&nbsp;</div>
-            <div class="card">
-                <img src="images/logo2.jpg" class="card-img-top" alt="foto">
-                <div class="card-body">
-                    <h5 class="card-title">Corte y Confeccion</h5>
-                    <p class="card-text">Aqui iria una breve explicacion de lo que trata el curso y de los contenidos y
-                        aprendizajes que se llevan acabo en el.</p>
-                    <button class="boton-cards">Ir al curso</button>
-                </div>
-            </div>
-            <div class="col-md-1">&nbsp;</div>
-            <div class="card">
-                <img src="images/logo2.jpg" class="card-img-top" alt="foto">
-                <div class="card-body">
-                    <h5 class="card-title">Modelaje</h5>
-                    <p class="card-text">Aqui iria una breve explicacion de lo que trata el curso y de los contenidos y
-                        aprendizajes que se llevan acabo en el.</p>
-                    <button class="boton-cards">Ir al curso</button>
-                </div>
+        <div class="container" id="contenido">
+            <div class="row">
+              <div class="col-md-8">
+                <img src="https://www.artsmus.com/wp-content/uploads/2019/07/clases-de-arte-en-torrejon-de-ardoz.png" alt="" width="100%">
+              </div>
+              <div class="col-md-4">
+                  <img src="https://www.artsmus.com/wp-content/uploads/2019/07/clases-de-arte-en-torrejon-de-ardoz.png" alt="" width="100%">
+              </div>
             </div>
         </div>
 

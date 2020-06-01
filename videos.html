@@ -1,164 +1,418 @@
 <!doctype html>
+
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-    <meta name="generator" content="Jekyll v3.8.6">
-    <title>Jumbotron Template · Bootstrap</title>
-    <!-- Required meta tags -->
 
-    <meta charset="utf-8">
+<head>
 
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- Required meta tags -->
 
-    <!-- Bootstrap CSS -->
+  <meta charset="utf-8">
 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel="shortcut icon" href="ico/favicon.ico">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Favicons -->
-<link rel="apple-touch-icon" href="/docs/4.4/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
-<link rel="icon" href="/docs/4.4/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
-<link rel="icon" href="/docs/4.4/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
-<link rel="manifest" href="/docs/4.4/assets/img/favicons/manifest.json">
-<link rel="mask-icon" href="/docs/4.4/assets/img/favicons/safari-pinned-tab.svg" color="#563d7c">
-<link rel="icon" href="/docs/4.4/assets/img/favicons/favicon.ico">
-<meta name="msapplication-config" content="/docs/4.4/assets/img/favicons/browserconfig.xml">
-<meta name="theme-color" content="#563d7c">
+  <!-- Bootstrap CSS -->
 
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="shortcut icon" href="ico/favicon.ico">
+  <link rel="stylesheet" type="text/css" href="fonts/Leixo.ttf">
 
-    <style>
-      .bd-placeholder-img {
-        font-size: 1.125rem;
-        text-anchor: middle;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-        user-select: none;
-      }
+  <title>TFG</title>
+  <style>
+    @font-face {
+      font-family: Leixo;
+      src: url(fonts/Leixo.ttf);
+    }
 
-      @media (min-width: 768px) {
-        .bd-placeholder-img-lg {
-          font-size: 3.5rem;
-        }
-        .card-img-top{
-            width: 10%;
-            height: 10%;
-        }
-      }
-    </style>
-    <!-- Custom styles for this template -->
-    <link href="jumbotron.css" rel="stylesheet">
-  </head>
-  <body>
-    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-  <a class="navbar-brand" href="#">Navbar</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
+    body {
+      background: rgb(236, 236, 123);
+    }
 
-  <div class="collapse navbar-collapse" id="navbarsExampleDefault">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Link</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-      </li>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
-        <div class="dropdown-menu" aria-labelledby="dropdown01">
-          <a class="dropdown-item" href="#">Action</a>
-          <a class="dropdown-item" href="#">Another action</a>
-          <a class="dropdown-item" href="#">Something else here</a>
-        </div>
-      </li>
-    </ul>
-    <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-    </form>
-  </div>
-</nav>
+    #barra {
+      background-color: black;
+      height: 110px;
+    }
 
-<main role="main">
+    #icono {
+      width: 90%;
+      height: 140%;
+      margin-left: -150px;
+      margin-bottom: -120px;
+    }
 
-  <!-- Main jumbotron for a primary marketing message or call to action -->
-  <div class="jumbotron">
-    <div class="container">
-      <h1 class="display-3">Hello, world!</h1>
-      <p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
-      <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p>
+    #titulo {
+      margin-bottom: 2%;
+      margin-left: -50%;
+      color: white;
+      font-size: 170%;
+      font-family: Leixo;
+
+    }
+
+    #menu {
+      background-color: black;
+      color: white;
+      border: none;
+      margin-left: -100%;
+      font-size: 125%;
+      margin-top: 20%;
+    }
+
+    #desplegable {
+      background-color: black;
+      color: white;
+    }
+
+    a {
+      color: white
+    }
+
+    a:hover {
+      color: rgb(214, 214, 11);
+    }
+
+    li {
+      list-style: none;
+    }
+
+    #registro {
+      color: white;
+      margin-left: -10%;
+      font-size: 125%;
+
+    }
+
+    #registro:hover {
+      color: rgb(214, 214, 11);
+
+    }
+
+    #contenido {
+      margin-top: 3%;
+    }
+
+    .foooter {
+      knob background: rgba(0, 0, 0, 1);
+      background: -moz-linear-gradient(left, rgba(0, 0, 0, 1) 0%, rgba(212, 186, 82, 1) 29%, rgba(240, 218, 105, 1) 54%, rgba(236, 236, 123, 1) 76%, rgba(235, 239, 123, 1) 100%);
+      background: -webkit-gradient(left top, right top, color-stop(0%, rgba(0, 0, 0, 1)), color-stop(29%, rgba(212, 186, 82, 1)), color-stop(54%, rgba(240, 218, 105, 1)), color-stop(76%, rgba(236, 236, 123, 1)), color-stop(100%, rgba(235, 239, 123, 1)));
+      background: -webkit-linear-gradient(left, rgba(0, 0, 0, 1) 0%, rgba(212, 186, 82, 1) 29%, rgba(240, 218, 105, 1) 54%, rgba(236, 236, 123, 1) 76%, rgba(235, 239, 123, 1) 100%);
+      background: -o-linear-gradient(left, rgba(0, 0, 0, 1) 0%, rgba(212, 186, 82, 1) 29%, rgba(240, 218, 105, 1) 54%, rgba(236, 236, 123, 1) 76%, rgba(235, 239, 123, 1) 100%);
+      background: -ms-linear-gradient(left, rgba(0, 0, 0, 1) 0%, rgba(212, 186, 82, 1) 29%, rgba(240, 218, 105, 1) 54%, rgba(236, 236, 123, 1) 76%, rgba(235, 239, 123, 1) 100%);
+      background: linear-gradient(to right, rgba(0, 0, 0, 1) 0%, rgba(212, 186, 82, 1) 29%, rgba(240, 218, 105, 1) 54%, rgba(236, 236, 123, 1) 76%, rgba(235, 239, 123, 1) 100%);
+      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#000000', endColorstr='#ebef7b', GradientType=1);
+
+    }
+
+    #boton {
+      border-radius: 5.5px;
+      margin-top: 1.5%;
+      width: 120px;
+      height: 35px;
+      color: white;
+      background-color: black;
+      border-color: rgb(236, 236, 123);
+    }
+
+    .card {
+      margin-top: 0%;
+      border: 1px solid white;
+      width: 18rem;
+      background-color: black;
+      color: white;
+    }
+
+    #inicio {
+      border-color: black;
+      margin-right: 100px;
+      color: black !important;
+      background-color: white;
+    }
+
+    .detailBox {
+      width: 100%;
+      border: 1px solid #bbb;
+      margin-top: 2%;
+      margin-bottom: 2%;
+      background-color: black;
+      color: white;
+    }
+
+    .titleBox {
+      background-color: #fdfdfd;
+      padding: 10px;
+    }
+
+    .titleBox label {
+      color: #444;
+      margin: 0;
+      display: inline-block;
+    }
+
+    .commentBox {
+      padding: 10px;
+      border-top: 1px dotted #bbb;
+    }
+
+    .commentBox .form-group:first-child,
+    .actionBox .form-group:first-child {
+      width: 80%;
+    }
+
+    .commentBox .form-group:nth-child(2),
+    .actionBox .form-group:nth-child(2) {
+      width: 18%;
+    }
+
+    .actionBox .form-group * {
+      width: 100%;
+    }
+
+    .taskDescription {
+      margin-top: 10px 0;
+    }
+
+    .commentList {
+      padding: 0;
+      list-style: none;
+      max-height: 200px;
+      overflow: auto;
+    }
+
+    .commentList li {
+      margin: 0;
+      margin-top: 10px;
+    }
+
+    .commentList li>div {
+      display: table-cell;
+    }
+
+    .commenterImage {
+      width: 30px;
+      margin-right: 5px;
+      height: 100%;
+      float: left;
+    }
+
+    .commenterImage img {
+      width: 100%;
+      border-radius: 50%;
+    }
+
+    .commentText p {
+      margin: 0;
+    }
+
+    .sub-text {
+      color: yellow;
+      font-family: verdana;
+      font-size: 11px;
+    }
+
+    .actionBox {
+      border-top: 1px dotted #bbb;
+      padding: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container-fliud">
+    <div class="row" id="barra">
+      <div class="col-md-1">&nbsp</div>
+      <div class="col-md-2"><img src="images/Logo.png" id="icono" /></div>
+      <div class="col-md-2" style="margin-top: 2%;"><span id="titulo">Lerning Sewing Desing</span></div>
+      <div class="col-lg-1 col-md-1 col-sm-1"> 
+      </div>
+      <div class="col-lg-1 col-md-1 col-sm-1">
+      </div>
+      <div class="col-md-2">&nbsp</div>
+      <div class="col-md-2" id="boton"><a href="#">Mi perfil</a></div>
     </div>
-  </div>
-
-  <div class="container">
-    <!-- Example row of columns -->
     <div class="row" id="contenido">
-        <div class="col-md-1">&nbsp;</div>
-        <div class="card">
-            <img src="images/logo2.jpg" class="card-img-top" alt="foto">
-            <div class="card-body">
-                <h5 class="card-title">Patronaje</h5>
-                <p class="card-text">Aqui iria una breve explicacion de lo que trata el curso y de los contenidos y
-                    aprendizajes que se llevan acabo en el.</p>
-            </div>
+      <div class="col-md-1">
+
+      </div>
+      <div class="col-md-8">
+        <div class="embed-responsive embed-responsive-16by9">
+          <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/HWwHmeEw2Us"
+            allowfullscreen></iframe>
         </div>
-        <div class="col-md-1">&nbsp;</div>
-        <div class="card">
-            <img src="images/logo2.jpg" class="card-img-top" alt="foto">
-            <div class="card-body">
-                <h5 class="card-title">Diseño de moda</h5>
-                <p class="card-text">Aqui iria una breve explicacion de lo que trata el curso y de los contenidos y
-                    aprendizajes que se llevan acabo en el.</p>
+      </div>
+      <div class="col-md-3">
+        <div class="row">
+          <div class="col-md-7">
+            <div id="accordion">
+              <div class="card">
+                <div class="card-header" id="headingOne">
+                  <h5 class="mb-0">
+                    <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true"
+                      aria-controls="collapseOne">
+                      Collapsible Group Item #1
+                    </button>
+                  </h5>
+                </div>
+
+                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                  <div class="card-body">
+                    <div class="embed-responsive embed-responsive-16by9">
+                      <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/HWwHmeEw2Us"
+                        allowfullscreen></iframe>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-header" id="headingTwo">
+                  <h5 class="mb-0">
+                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo"
+                      aria-expanded="false" aria-controls="collapseTwo">
+                      Collapsible Group Item #2
+                    </button>
+                  </h5>
+                </div>
+                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                  <div class="card-body">
+                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3
+                    wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum
+                    eiusmod. Brunch 3 wolf moon
+                    tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil
+                    anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan
+                    excepteur butcher vice lomo.
+                    Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't
+                    heard of them accusamus labore sustainable VHS.
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-header" id="headingThree">
+                  <h5 class="mb-0">
+                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree"
+                      aria-expanded="false" aria-controls="collapseThree">
+                      Collapsible Group Item #3
+                    </button>
+                  </h5>
+                </div>
+                <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                  <div class="card-body">
+                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3
+                    wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum
+                    eiusmod. Brunch 3 wolf moon
+                    tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil
+                    anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan
+                    excepteur butcher vice lomo.
+                    Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't
+                    heard of them accusamus labore sustainable VHS.
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-header" id="headingFour">
+                  <h5 class="mb-0">
+                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFour"
+                      aria-expanded="false" aria-controls="collapseThree">
+                      Collapsible Group Item #3
+                    </button>
+                  </h5>
+                </div>
+                <div id="collapseFour" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                  <div class="card-body">
+                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3
+                    wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum
+                    eiusmod. Brunch 3 wolf moon
+                    tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil
+                    anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan
+                    excepteur butcher vice lomo.
+                    Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't
+                    heard of them accusamus labore sustainable VHS.
+                  </div>
+                </div>
+              </div>
             </div>
+          </div>
         </div>
-        <div class="col-md-1">&nbsp;</div>
-        <div class="card">
-            <img src="images/logo2.jpg" class="card-img-top" alt="foto">
-            <div class="card-body">
-                <h5 class="card-title">Corte y Confeccion</h5>
-                <p class="card-text">Aqui iria una breve explicacion de lo que trata el curso y de los contenidos y
-                    aprendizajes que se llevan acabo en el.</p>
-            </div>
+      </div>
+
+    </div>
+    <div class="row">
+      <div class="col-md-1">
+
+      </div>
+      <div class="col-md-8">
+        <div class="detailBox">
+
+          <div class="commentBox">
+
+            <p class="taskDescription">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+          </div>
+          <div class="actionBox">
+            <ul class="commentList">
+              <li>
+                <div class="commenterImage">
+                  <img src="http://placekitten.com/50/50" />
+                </div>
+                <div class="commentText">
+                  <p class="">Hello this is a test comment.</p> <span class="date sub-text">on March 5th, 2014</span>
+
+                </div>
+              </li>
+              <li>
+                <div class="commenterImage">
+                  <img src="http://placekitten.com/45/45" />
+                </div>
+                <div class="commentText">
+                  <p class="">Hello this is a test comment and this comment is particularly very long and it goes on and
+                    on and on.</p> <span class="date sub-text">on March 5th, 2014</span>
+
+                </div>
+              </li>
+              <li>
+                <div class="commenterImage">
+                  <img src="http://placekitten.com/40/40" />
+                </div>
+                <div class="commentText">
+                  <p class="">Hello this is a test comment.</p> <span class="date sub-text">on March 5th, 2014</span>
+
+                </div>
+              </li>
+            </ul>
+            <form class="form-inline" role="form">
+              <div class="form-group">
+                <input class="form-control" type="text" placeholder="Your comments" />
+              </div>
+              <div class="form-group">
+                <button class="btn btn-default">Add</button>
+              </div>
+            </form>
+          </div>
         </div>
-        <div class="col-md-1">&nbsp;</div>
-        <div class="card">
-            <img src="images/logo2.jpg" class="card-img-top" alt="foto">
-            <div class="card-body">
-                <h5 class="card-title">Modelaje</h5>
-                <p class="card-text">Aqui iria una breve explicacion de lo que trata el curso y de los contenidos y
-                    aprendizajes que se llevan acabo en el.</p>
-            </div>
-        </div>
+      </div>
     </div>
 
-    <hr>
+    <div class="foooter" style="background-color: black; color:rgb(97, 96, 96); text-align: center;">&copy;2020-2021 TFG
+      DESARROLLO DE
+      APLICACIONES
+      WEB todos los derechos reservados </div>
 
-  </div> <!-- /container -->
+  </div>
 
-</main>
 
-<footer class="container">
-  <p>&copy; Company 2017-2019</p>
-</footer>
-<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
-crossorigin="anonymous"></script>
+  <!-- Optional JavaScript -->
 
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-crossorigin="anonymous"></script>
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
-crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
 
 </body>
+
 </html>
