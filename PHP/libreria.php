@@ -80,5 +80,18 @@ function header($tipouser){
       break;
   }
 }
-
+function pintarprofesor($idprofesor){
+  require("funcionconection.php");
+  $con = conexion("academiatfg");
+  $consulta = "select  nombre, especialidad, valoracion, foto, idProfesor from profesor where Usuarios_idUsuarios= $idprofesor";
+  $row=mysqli_fetch_row($consulta);
+  return $row;
+}
+function arrayalumno($idalumno){
+  require("funcionconection.php");
+  $con = conexion("academiatfg");
+  $consulta = "select  nombre, estudios, id_Estudiante from alumno where Usuarios_idUsuarios= $idalumno";
+  $row=mysqli_fetch_row($consulta);
+  return $row;
+}
 ?>
