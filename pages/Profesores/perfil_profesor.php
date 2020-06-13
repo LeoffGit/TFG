@@ -1,5 +1,5 @@
 <?php
-include 'menu_logeado.html';
+include '../headers/header.html';
 ?>
 <body>
     <br>
