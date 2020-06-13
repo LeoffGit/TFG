@@ -1,11 +1,12 @@
 <?php
 include '../headers/header.html';
+include '../../PHP/libreria.php';
 ?>
 <body>
     <br>
     <!-- perfil del alumno -->
     <div class="row">
-        <div class="col-sm-1">&nbsp</div>
+        <div class="col-sm-5">&nbsp</div>
         <div class="col-sm-2">
             <img src="../../images/fotosProfesores/uno.png" class="card-img-top" alt="foto">
           <div class="card-body">
@@ -13,8 +14,9 @@ include '../headers/header.html';
           </div>
         </div>
         </div>
-        <div class="col-sm-3">&nbsp</div>
-    </div>
+        <div class="col-sm-5">&nbsp</div>
+       
+    
     <br><hr><br>
     
     <div class="col-sm-3">
