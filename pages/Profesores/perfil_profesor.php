@@ -3,11 +3,32 @@ include '../headers/header.html';
 ?>
 <body>
     <br>
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-md-1">&nbsp</div>
-            <div class="col-md-8">
-                
+    <!-- perfil del alumno -->
+    <div class="row">
+        <div class="col-sm-1">&nbsp</div>
+        <div class="col-sm-2">
+            <img src="../../images/fotosProfesores/uno.png" class="card-img-top" alt="foto">
+          <div class="card-body">
+            <h5 class="card-title">Hola pepito </h5>
+          </div>
+        </div>
+        </div>
+        <div class="col-sm-3">&nbsp</div>
+    </div>
+    <br><hr><br>
+    
+    <div class="col-sm-3">
+        <div class="card">
+          <img src="images/logo2.jpg" class="card-img-top" alt="foto">
+          <div class="card-body">
+            <h5 class="card-title">Corte y Confeccion</h5>
+            <p class="card-text">Aqui iria una breve explicacion de lo que trata el curso y de los contenidos y
+              aprendizajes que se llevan acabo en el.</p>
+            <button class="boton-cards">Ir al curso</button>
+          </div>
+        </div>
+      </div>
+    
                 <h3>Tus cursos</h3>
                 <?php
                 //session_start();
@@ -49,9 +70,9 @@ include '../headers/header.html';
                     echo " ";
                 
                 ?>
-               </div>
+               
              <div class="col-md-2">&nbsp</div>
-            </div>
+            
            
         
         <div class="row">
@@ -73,5 +94,5 @@ include '../headers/header.html';
             <div class="col-md-1">&nbsp</div>
         </div>
 
-    </div>
+    
 </body>
