@@ -51,7 +51,9 @@
         return $nombre="bienvenido $usuario";
     }
 
-    //las rutas de los header estan en raiz
+    /*las rutas de los header estan en raiz
+    al hacer include de la pag da error: cannot redeclare header
+    habrua q 
     function header($tipouser){
         switch (variable) {
             case '1':
@@ -61,15 +63,15 @@
                 include '../headers/headerprofesor.html';
                 break;
             default:
-            //al hacer include de la pag da error: cannot redeclare hen
+            
                 include '../headers/headerNoLogeado.html';
            }    
-    }
+    }*/
 
     function pintarprofesor($idprofesor){
         require("funcionconection.php");
         $con = conexion("academiatfg");
-        $consulta = "select  nombre, especialidad, valoracion, foto, idProfesor from profesor where Usuarios_idUsuarios= $idprofesor";
+        $consulta = "select nombre, especialidad, valoracion, foto, idProfesor from profesor where Usuarios_idUsuarios= $idprofesor";
         $row=mysqli_fetch_row($consulta);
         return $row;
     }
