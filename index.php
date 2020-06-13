@@ -1,5 +1,5 @@
 <?php
-    include 'heade
+    include 'headers/headerNoLogeado.html';
 ?>
 
     <div class="row" id="contenido">
