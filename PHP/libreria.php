@@ -69,10 +69,18 @@
     }*/
 
     function pintarprofesor($idprofesor){
-        require("funcionconection.php");
+        require("funcionconexion.php");
         $con = conexion("academiatfg");
         $consulta = "select nombre, especialidad, valoracion, foto, idProfesor from profesor where Usuarios_idUsuarios= $idprofesor";
         $row=mysqli_fetch_row($consulta);
+        return $row;
+    }
+
+    function cursosProfesor($sesion_idUsuario){
+        require("funcionconection.php");
+        $con = conexion("academiatfg");
+        $query = "select nombre, foto, descripcion from curso where Profesor_Usuarios_idUsuarios = $sesion_idUsuario";
+        $row=mysqli_fetch_row($query);
         return $row;
     }
 

@@ -1,7 +1,7 @@
 <?php
     include '../headers/header.html';
     include '../../PHP/libreria.php';
-    include '../../PHP/funcionconection.php';  
+    
 ?>
     <body>
         <div class="container-fluid">
@@ -18,13 +18,12 @@
 
         <!--que la imagen se llame de la misma manera que el curso, los enlaces row[$nombreCurso] -->
             <div class="row" id="rowProfesor">
-
-
                 <?php
-                require("funcionconection.php");
-                $con = conexion("academiatfg");
-                $query = mysqli_query($conexion,"select nombre, foto, descripcion from curso where ='$id_usuario'");
-
+                //session_start();
+                $_SESSION ['id_usuario']=10;
+                $sesion_idUsuario=$_SESSION ['id_usuario']; 
+                cursosProfesor($sesion_idUsuario);
+                
                 ?>
 
                 <div class="col-sm-3">
