@@ -2,73 +2,58 @@
     include 'headers/headerNoLogeado.html';
 ?>
 
-    <div class="row" id="contenido">
-      <div class="col-sm-3">
-      <div class="card">
-        <img src="images/logo2.jpg" class="card-img-top" alt="foto">
-        <div class="card-body">
-          <h5 class="card-title">Patronaje</h5>
-          <p class="card-text">Aqui iria una breve explicacion de lo que trata el curso y de los contenidos y
-            aprendizajes que se llevan acabo en el.</p>
-          <button class="boton-cards">Ir al curso</button>
+    <body>
+        <div class="row" id="contenido">
+            <div class="col-sm-3">
+                <div class="card">
+                    <img src="images/logo2.jpg" class="card-img-top" alt="foto">
+                    <div class="card-body">
+                        <h5 class="card-title">Patronaje</h5>
+                        <p class="card-text">Aqui iria una breve explicacion de lo que trata el curso y de los contenidos y
+                        aprendizajes que se llevan acabo en el.</p>
+                        <button class="boton-cards">Ir al curso</button>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="col-sm-3">
+                <div class="card">
+                    <img src="images/logo2.jpg" class="card-img-top" alt="foto">
+                    <div class="card-body">
+                        <h5 class="card-title">Diseño de moda</h5>
+                        <p class="card-text">Aqui iria una breve explicacion de lo que trata el curso y de los contenidos y
+                        aprendizajes que se llevan acabo en el.</p>
+                        <button class="boton-cards">Ir al curso</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="card">
+                    <img src="images/logo2.jpg" class="card-img-top" alt="foto">
+                    <div class="card-body">
+                        <h5 class="card-title">Corte y Confeccion</h5>
+                        <p class="card-text">Aqui iria una breve explicacion de lo que trata el curso y de los contenidos y
+                        aprendizajes que se llevan acabo en el.</p>
+                        <button class="boton-cards">Ir al curso</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="card">
+                    <img src="images/logo2.jpg" class="card-img-top" alt="foto">
+                    <div class="card-body">
+                        <h5 class="card-title">Modelaje</h5>
+                        <p class="card-text">Aqui iria una breve explicacion de lo que trata el curso y de los contenidos y
+                        aprendizajes que se llevan acabo en el.</p>
+                        <button class="boton-cards">Ir al curso</button>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-      <div class="col-sm-3">
-        <div class="card">
-          <img src="images/logo2.jpg" class="card-img-top" alt="foto">
-          <div class="card-body">
-            <h5 class="card-title">Diseño de moda</h5>
-            <p class="card-text">Aqui iria una breve explicacion de lo que trata el curso y de los contenidos y
-              aprendizajes que se llevan acabo en el.</p>
-            <button class="boton-cards">Ir al curso</button>
-          </div>
-        </div>
-      </div>
-      <div class="col-sm-3">
-        <div class="card">
-          <img src="images/logo2.jpg" class="card-img-top" alt="foto">
-          <div class="card-body">
-            <h5 class="card-title">Corte y Confeccion</h5>
-            <p class="card-text">Aqui iria una breve explicacion de lo que trata el curso y de los contenidos y
-              aprendizajes que se llevan acabo en el.</p>
-            <button class="boton-cards">Ir al curso</button>
-          </div>
-        </div>
-      </div>
-      <div class="col-sm-3">
-        <div class="card">
-          <img src="images/logo2.jpg" class="card-img-top" alt="foto">
-          <div class="card-body">
-            <h5 class="card-title">Modelaje</h5>
-            <p class="card-text">Aqui iria una breve explicacion de lo que trata el curso y de los contenidos y
-              aprendizajes que se llevan acabo en el.</p>
-            <button class="boton-cards">Ir al curso</button>
-          </div>
-        </div>
-      </div>
-
-    </div>
+    
     <!-- Footer -->
-    <div class="fixed-bottom botomito" style="background-color: black; color:rgb(97, 96, 96); text-align: center;">
-      &copy;2020-2021 TFG DESARROLLO DE
-      APLICACIONES
-      WEB todos los derechos reservados
-      <div class="rrss">
-        <a class="btn btn-block btn-social btn-twitter">
-          <span class="fa fa-twitter"></span> Siguenos en Twitter
-        </a>
-        <a class="btn btn-block btn-social btn-twitter">
-          <span class="fa fa-facebook"></span> Siguenos en Facebook
-        </a>
-        <a class="btn btn-block btn-social btn-twitter">
-          <span class="fa fa-instagram"></span> Siguenos en instagram
-        </a>
-      </div>
+    <?php include 'pages/footer.html'; ?>
 
-    </div>
-
-  </div>
 
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -78,5 +63,4 @@
 
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 
-</body>
 

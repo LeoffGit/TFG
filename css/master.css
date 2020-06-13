@@ -22,10 +22,20 @@ nav {
 .icono img {
   height: 8em;
 }
+.centrarImagen{
+    text-align: center;
+    display:block;
+    margin:auto;
+}
+
 #titulo {
   color: white;
   font-size: 200%;
   font-family: Leixo;
+}
+
+#rowProfesor{
+    height: 25em;
 }
 
 .card-img-top {
