@@ -16,8 +16,7 @@
 
         <br><hr><br>
 
-        <!--que la imagen se llame de la misma manera que el curso, los enlaces row[$nombreCurso] -->
-            <div class="row" id="rowProfesor">
+          <div class="row" id="rowProfesor">
                 <?php
                 //session_start();
                 $_SESSION ['id_usuario']=10;
@@ -34,10 +33,7 @@
                                         <h5 class="card-title"><?php echo $fila[0] ?></h5>
                                         <?php
                                           echo "<img src=../../images/fotosProfesores/.$fila[1].?>png <?php alt='".$fila[0]."' class='card-img-top' />"
-
                                         ?>
-                                        
-                                  
                                         <br><br>
                                         <h5 class="card-text"><?php echo $fila[2]; ?></h5>
                                         <br><p class="card-text">
@@ -49,8 +45,9 @@
                                 </div>
                             </div>
                         </div>
-                    <?php }
+                    <?php 
                     }
+                }
                 ?>
                 <div class="col-sm-3">
                     <div class="card">
