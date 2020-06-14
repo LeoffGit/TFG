@@ -80,7 +80,7 @@
         require("funcionconection.php");
         $con = conexion("academiatfg");
         $query = "select nombre, foto, descripcion from curso where Profesor_Usuarios_idUsuarios = $sesion_idUsuario";
-        $row=mysqli_fetch_row($query);
+        $row = mysqli_query($con,$query);
         return $row;
     }
 
