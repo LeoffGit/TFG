@@ -42,7 +42,15 @@ nav {
   text-align: center;
   background-repeat: no-repeat;
   background-position: 50%;
+/*.centrarImagen {
+  text-align: center;
+  height: 18em;
+  width: 18em;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  border-radius: 50%; 
   background-size: 100% auto;
+  */
 }
 
 #saludo {
@@ -114,6 +122,7 @@ nav {
   margin-right: 7%;
   border-color: rgb(236, 236, 123);
 }
+
 .boton2{
   border-radius: 0.5em;
   width: 8em;
@@ -124,6 +133,7 @@ nav {
   margin-right: 7%;
   border-color: rgb(236, 236, 123);
 }
+
 
 @font-face {
   font-family: Leixo;
