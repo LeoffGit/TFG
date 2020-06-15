@@ -71,6 +71,12 @@ require("funcionconection.php");
            }
     }
 
+    function footer(){
+      $documento= $_SERVER['DOCUMENT_ROOT'];
+                include "$documento/TFG/Footer/footer.html";
+
+    }
+
     function pintarprofesor($idprofesor){
         $con = conexion("academiatfg");
         $consulta = "select nombre, especialidad, valoracion, foto, idProfesor from profesor where Usuarios_idUsuarios= $idprofesor";
