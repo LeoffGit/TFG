@@ -3,7 +3,7 @@ function conexion($bbdd){
 
     $serv="localhost";
     $usuario="root";
-    $clave="metrica123";
+    $clave="";
     $con=mysqli_connect($serv,$usuario,$clave,$bbdd);
 
     if(mysqli_connect_errno()){

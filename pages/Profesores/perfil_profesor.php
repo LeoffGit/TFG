@@ -15,7 +15,6 @@
            </div>
 
         <br><hr><br>
-
           <div class="row" id="rowProfesor">
                 <?php
                 //session_start();
@@ -26,6 +25,7 @@
                     while($fila=mysqli_fetch_row($result)){
                         $query = "select nombre, foto, descripcion from curso where Profesor_Usuarios_idUsuarios = $sesion_idUsuario";
                         ?>
+
                         <!-- EL NOMBRE DE LA FOTO ES LA MISMA QUE LA DEL CURSO-->
                         <div class="col-sm-3">
                             <div class="card">
@@ -42,7 +42,7 @@
                     }
                 }
                 ?>
-                    
+
             </div>
         </div>
     </body>
