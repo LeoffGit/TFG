@@ -21,7 +21,7 @@ $_SESSION['curso'] = "1";
 </head>
 
 <body>
-<?php include "../pages/headers/header.html" ?>
+<?php include "../cabeceras/header.php" ?>
 <div id="L">
 
 

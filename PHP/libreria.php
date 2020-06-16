@@ -4,7 +4,6 @@ require("funcionconection.php");
         if(isset($_POST['inicio'])) {
             $email = $_POST['email'];
             $contrasena = $_POST['contrasena'];
-
             $query = mysqli_query($conexion,"select * from usuarios WHERE email = '$email' AND contrasena = '$contrasena'");
             $contar = mysqli_num_rows($query);
             if ($contar != 0) {
@@ -26,6 +25,7 @@ require("funcionconection.php");
         $conexion = conexion("academiatfg");
         $email = $_POST['logmail'];
         $contrasena = $_POST['logcontrasena'];
+        //$_SESSION['tipouser'] = 0;
         $query = mysqli_query($conexion,"select * from usuarios WHERE email = '$email' AND contrasena = '$contrasena'");
         $contar = mysqli_num_rows($query);
         if ($contar != 0){
@@ -54,7 +54,8 @@ require("funcionconection.php");
     }
 
     /*las rutas de los header estan en raiz
-    al hacer include de la pag da error: cannot redeclare header habrua q*/
+    al hacer include de la pag da error: cannot redeclare header
+    habrua q*/
     function headerito($tipouser){
       $documento= $_SERVER['DOCUMENT_ROOT'];
         switch ($tipouser) {
@@ -81,18 +82,22 @@ require("funcionconection.php");
         $consulta = "select nombre, especialidad, valoracion, foto, idProfesor from profesor where Usuarios_idUsuarios= $idprofesor";
         $row=mysqli_fetch_row($consulta);
         mysqli_close($con);
+
         return $row;
     }
 
     function cursosProfesor($sesion_idUsuario){
+
         $con = conexion("academiatfg");
         $query = "select nombre, foto, descripcion from curso where Profesor_Usuarios_idUsuarios = $sesion_idUsuario";
         $row = mysqli_query($con,$query);
         mysqli_close($con);
+
         return $row;
     }
 
     function arrayalumno($idalumno){
+
         $con = conexion("academiatfg");
         $consulta = "select  nombre, estudios, id_Estudiante from alumno where Usuarios_idUsuarios= $idalumno";
         $row=mysqli_fetch_row($consulta);
