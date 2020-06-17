@@ -36,12 +36,9 @@ require("funcionconection.php");
                     $_SESSION['nombre'] = $row['nombre'];
                     $query2 = mysqli_query($conexion,"select * from alumno WHERE Usuarios_idUsuarios = $row[idUsuarios]");
                     $contar2 = mysqli_num_rows($query2);
-                    echo "$contar2";
                         if ($contar2 == 0){
-                          echo "hola";
                             $_SESSION['tipouser']=2;
                         }else{
-                          echo "holaw";
                             $_SESSION['tipouser']=1;
                         }
                     }
@@ -49,16 +46,25 @@ require("funcionconection.php");
             mysqli_close($conexion);
     }
 
-    function saludarusuario($usuario){
-        return $nombre="bienvenido $usuario";
+    function logout(){
+      session_destroy();
+      $_SESSION['tipouser']=0;
+    }
+
+    function saludarusuario(){
+      $usuario=$_SESSION['nombre'] ;
+        echo "Bienvenido $usuario";
     }
 
     /*las rutas de los header estan en raiz
     al hacer include de la pag da error: cannot redeclare header
     habrua q*/
-    function headerito($tipouser){
+    function headerito(){
       $documento= $_SERVER['DOCUMENT_ROOT'];
-        switch ($tipouser) {
+      if (!isset($_SESSION['tipouser'])) {
+        $_SESSION['tipouser']=0;
+      }
+        switch ($_SESSION['tipouser']) {
             case '1':
                 include "$documento/TFG/cabeceras/headerAlumno.php";
                 break;
@@ -116,6 +122,9 @@ require("funcionconection.php");
         case '/TFG/pages/Cursos/Patronaje/Principal.php':
         $_SESSION['idpagina']=1;
           break;
+          case '/TFG/pages/Cursos/Patronaje/videos.php':
+          $_SESSION['idpagina']=1;
+            break;
           default:
             $_SESSION['idpagina']=0;
             break;
@@ -126,12 +135,21 @@ require("funcionconection.php");
       $con = conexion("academiatfg");
       $query = mysqli_query($con,"select * from cursos_adquiridos where Alumno_Usuarios_idUsuarios = $idalumno and curso_idcurso = $idcurso");
       if($contar = mysqli_num_rows($query)){
+        mysqli_close($con);
         return "Ya tienes el curso";
       }
       else {
+        mysqli_close($con);
         return "Adquirir Curso";
       }
-      mysqli_close($con);
-
     }
+      function linkvid($idalumno,$idcurso){
+        $con = conexion("academiatfg");
+        $query = mysqli_query($con,"select * from cursos_adquiridos where Alumno_Usuarios_idUsuarios = $idalumno and curso_idcurso = $idcurso");
+        if($contar = mysqli_num_rows($query)){
+          mysqli_close($con);
+          echo "<button class='boton-cards' name='Comenzar Curso'><a href='videos.php'>Comenzar Curso</a></button>";
+        }
+      }
+
 ?>

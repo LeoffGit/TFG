@@ -129,7 +129,17 @@ nav {
   font-family: Leixo;
   src: url(../fonts/Leixo.ttf);
 }
+a:link{
+  color:white;
+}
+a:hover{
+  color:white;
 
+}
+a:visited{
+  color:grey;
+
+}
 .card {
   background-color: black;
   color: white;

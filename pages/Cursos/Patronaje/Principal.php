@@ -75,7 +75,7 @@ if(isset($_POST['adquirir'])){
                 <li><?php echo $_SESSION['id_usuario'] ?></li>
                 <li><?php echo $_SESSION['nombre'] ?></li>
                 <li><?php echo $_SESSION['email'] ?></li>
-                <li><?php  $_SESSION['tipouser']=1; echo$_SESSION['tipouser']; ?></li>
+                <li>requisitos</li>
                 <li>requisitos</li>
                 <li>requisitos</li>
                 <li>requisitos</li>
@@ -162,6 +162,7 @@ if(isset($_POST['adquirir'])){
               <form class="" action="" method="post">
               <button type="submit" class="boton-cards" name="adquirir"><?php $esto=checkCurso($_SESSION['id_usuario'],$_SESSION['idpagina']); echo $esto; ?></button>
               </form>
+              <?php linkvid($_SESSION['id_usuario'],$_SESSION['idpagina']); ?>
               <br><br>
               <p class="card-text">Este curso contiene :</p>
 
