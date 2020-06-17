@@ -4,7 +4,7 @@
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="collapse_menu">
-            <a class="navbar-brand" href="#"><img src="http://localhost/TFG/images/Logo2.png" alt=""></a>
+            <a class="navbar-brand" href="/TFG/indexito.php"><img src="http://localhost/TFG/images/Logo2.png" alt=""></a>
 
             <span class="navbar-text" id="titulo">Learning Sewing Desing</span>
             <button type="btn " id="boton" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Inicio/Registro</button>
@@ -30,7 +30,7 @@
 
                   </div>
                   <div class="modal-footer">
-                    <button type="button" id="boton"><a href="registro.php">Registrarse</a></button>
+                    <button type="button" id="boton"><a href="/TFG/pages/formulario.html">Registrarse</a></button>
                     <input type="submit"  value="Entrar" class="boton2">
                   </div>
                   </form>

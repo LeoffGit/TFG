@@ -34,7 +34,7 @@ if(isset($_POST['adquirir'])){
  </head>
 
  <body>
-   <?php headerito(); ?>
+   <?php headerito($_SESSION['tipouser']); ?>
     <div class="container" id="contenido">
       <div class="row">
         <div class="col-sm-8">
@@ -198,6 +198,7 @@ if(isset($_POST['adquirir'])){
         </a>
       </div>
     </div>
+  </div>
 
   <!-- Optional JavaScript -->
 

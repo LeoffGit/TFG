@@ -68,23 +68,7 @@ include "../../PHP/libreria.php";
                     <?php }
                     }
                 ?>
-                <div class="col-sm-3">
-                    <div class="card">
-                        <div class="card-body">
-                            <div class="centrarImagen">
-                                <h5 class="card-title">Corte y Confeccion</h5>
-                                <img src="../../images/fotosProfesores/uno.png" class="card-img-top" alt="foto">
-                                <br><br>
-                                <h5 class="card-text">Descripción</h5>
-                                <br><p class="card-text">
-
-                                </p><br>
-                            </div>
-                            <button class="boton-cards">Ir al curso</button>
-
-                        </div>
-                    </div>
-                </div>
+                
 
 
             </div>
