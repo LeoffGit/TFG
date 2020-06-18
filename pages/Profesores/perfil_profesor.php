@@ -1,6 +1,9 @@
 <?php
 session_start();
 include "../../PHP/libreria.php";
+if($_SESSION['tipouser']!=2){
+  header('location:/TFG/indexito.php');
+}
  ?>
  <!doctype html>
 
@@ -27,15 +30,16 @@ include "../../PHP/libreria.php";
    }
    a:hover{
      color:black;
-
    }
    a:visited{
      color:grey;
-
    }
+     .botomito{
+       position: fixed;
+       bottom: 0;
+     }
    </style>
    <title>TFG</title>
-
  </head>
     <body>
       <?php headerito(); ?>
@@ -45,34 +49,25 @@ include "../../PHP/libreria.php";
                 $sesion_idUsuario=$_SESSION ['id_usuario'];
                 $result = cursosProfesor($sesion_idUsuario);
                 if ($result != ""){
-
                   for ($i=0; $i <mysqli_num_rows($result); $i++){
                       $fila=mysqli_fetch_row($result);
                         ?>
                         <div class="col-sm-3">
                             <div class="card">
+                              <img src="/TFG/images/cursos/<?php echo $fila[1]  ?>/logocurso.jpg" class="card-img-top" alt="">
+
                                 <div class="card-body">
-                                    <div class="centrarImagen">
                                         <h5 class="card-title"><?php echo $fila[0] ?></h5>
-                                        <img src="/TFG/images/<?php echo $fila[1]  ?>" alt="">
-
-                                        <h5>Descripción</h5>
                                         <p class="card-text"><?php echo $fila[2]; ?></p>
-
-                                    </div>
                                     <button class="boton-cards"><a href="/TFG/pages/Cursos/<?php echo $fila[0]; ?>/Principal.php">Ir al curso</a></button>
-
                                 </div>
                             </div>
                         </div>
                     <?php }
                     }
                 ?>
-                
-
-
             </div>
         </div>
     </body>
-
     <?php footer(); ?>
+</html>

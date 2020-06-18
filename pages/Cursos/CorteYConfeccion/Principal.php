@@ -8,6 +8,8 @@ if(isset($_POST['logmail'])){
 if(isset($_POST['adquirir'])){
   adquirircurso($_SESSION['id_usuario'],$_SESSION['idpagina']);
 }
+$foto=getfotocurso($_SESSION['idpagina']);
+
  ?>
  <!doctype html>
 
@@ -47,13 +49,13 @@ if(isset($_POST['adquirir'])){
               </ol>
               <div class="carousel-inner">
                 <div class="carousel-item active">
-                  <img class="d-block w-100" src="../../../images/placeholder.jpg" alt="First slide">
+                  <img class="d-block w-100" src="../../../images/cursos/<?php echo $foto; ?>/carrusel1.jpg" alt="First slide">
                 </div>
                 <div class="carousel-item">
-                  <img class="d-block w-100" src="../../../images/placeholder2.jpg" alt="Second slide">
+                  <img class="d-block w-100" src="../../../images/cursos/<?php echo $foto; ?>/carrusel2.jpg" alt="Second slide">
                 </div>
                 <div class="carousel-item">
-                  <img class="d-block w-100" src="../../../images/placeholder3.jpg" alt="Third slide">
+                  <img class="d-block w-100" src="../../../images/cursos/<?php echo $foto; ?>/carrusel3.jpg" alt="Third slide">
                 </div>
               </div>
               <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -156,7 +158,7 @@ if(isset($_POST['adquirir'])){
         </div>
         <div class="col-sm-4">
           <div class="card shadow sticky-top">
-            <img src="../../../images/logo2.jpg" class="card-img-top " alt="foto">
+            <img src="../../../images/cursos/<?php echo $foto; ?>/logocurso.jpg" class="card-img-top " alt="foto">
             <div class="card-body text-white">
               <h5 class="card-title">Patronaje</h5>
               <form class="" action="" method="post">

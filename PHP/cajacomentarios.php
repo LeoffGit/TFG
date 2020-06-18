@@ -13,7 +13,6 @@
 
 <?php
   $cursoactual=$_SESSION['idpagina'];
-  echo $cursoactual;
 	$conexion=conexion("academiatfg");
 	if(isset($_POST['comentar'])) {
 		$query = mysqli_query($conexion,"INSERT INTO comentarios (curso_idcurso,comentario,Usuarios_idUsuarios,fecha) value ('".$_SESSION['idpagina']."','".$_POST['comentario']."','".$_SESSION['id_usuario']."',NOW())");
@@ -43,7 +42,7 @@
 
         	<li class=" list-group-item">
             	<div class="avatar">
-                <img src="../images/logo2.jpg" height="55" width="55">
+                <img src="/TFG/images/fotosUsuarios/<?php echo $user['foto']; ?>" height="55" width="55">
                 </div>
                 <div class="">
                 	<header>
@@ -67,18 +66,18 @@
 					$respuesta = mysqli_query($conexion,"SELECT * FROM comentarios WHERE respuesta = '".$row['idComentarios']."' ORDER BY idComentarios DESC");
 					while($rep=mysqli_fetch_array($respuesta)) {
 
-					$usuario2 = mysqli_query($conexion,"SELECT * FROM usuarios WHERE idUsuarios = '".$rep['idComentarios']."'");
+					$usuario2 = mysqli_query($conexion,"SELECT * FROM usuarios WHERE idUsuarios = '".$rep['Usuarios_idUsuarios']."'");
 					$user2 = mysqli_fetch_array($usuario2);
 				?>
 
                 <ul class="list-group">
                 	<li class="list-group-item">
                     	<div class="avatar">
-												<img src="../images/logo2.jpg" height="55" width="55">
+												<img src="/TFG/images/fotosUsuarios/<?php echo $user2['foto']; ?>" height="55" width="55">
                 </div>
                 	<div class="cmmnt-content">
                         <header>
-                        <a href="#" class="userlink"><?php echo $user2['usuario']; ?></a> - <span class="pubdate"><?php echo $rep['fecha']; ?></span>
+                        <a href="#" class="userlink"><?php echo $user2['nombre']; ?></a> - <span class="pubdate"><?php echo $rep['fecha']; ?></span>
                         </header>
                         <p>
                         <?php echo $rep['comentario']; ?>

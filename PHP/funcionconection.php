@@ -5,7 +5,7 @@ function conexion($bbdd){
     $usuario="root";
     $clave="";
     $con=mysqli_connect($serv,$usuario,$clave,$bbdd);
-
+    mysqli_set_charset($con, 'utf8');
     if(mysqli_connect_errno()){
 
         printf("Conexion fallida: %s\n", mysqli_connect_errno());

@@ -1,7 +1,9 @@
 <?php
 session_start();
 include "../../PHP/libreria.php";
-sesioncurso($_SERVER['REQUEST_URI']);
+if($_SESSION['tipouser']!=1){
+  header('location:/TFG/indexito.php');
+}
 ?>
 <!doctype html>
 
@@ -23,23 +25,27 @@ sesioncurso($_SERVER['REQUEST_URI']);
     <link rel="stylesheet" type="text-css" href="../../css/bootstrap-social.scss">
     <link rel="stylesheet" type="text/css" href="../../fonts/Leixo.ttf">
     <link rel="stylesheet" href="../../css/master.css">
-
+    <style media="screen">
+      .botomito{
+        position: fixed;
+        bottom: 0;
+      }
+    </style>
     <title>TFG</title>
 
 </head>
 
 <body>
-  <div class="page-container">
-  <?php headerito(); ?>
-
+    <?php headerito(); ?>
         <div class="container-fluid">
+
             <h1 class="display-4">Mis cursos</h1>
             <div class="row">
                 <div class="col-sm-1">&nbsp;</div>
         <?php
             $id=$_SESSION['id_usuario'];
             $conexion = mysqli_connect('localhost', 'root', '', 'academiatfg');
-            mysqli_set_charset($conexion, 'utf-8');
+            mysqli_set_charset($conexion, 'utf8');
             $consulta="select nombre from curso c, cursos_adquiridos cu where c.idcurso = cu.curso_idcurso and cu.Alumno_Usuarios_idUsuarios ='$id';";
             $resultado=mysqli_query($conexion,$consulta);
             if (mysqli_num_rows($resultado)==0) {
@@ -67,7 +73,6 @@ sesioncurso($_SERVER['REQUEST_URI']);
            <?php }
             mysqli_close($conexion);
           ?>
-        </div>
 
   <?php footer(); ?>
     </div>

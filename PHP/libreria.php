@@ -46,10 +46,7 @@ require("funcionconection.php");
             mysqli_close($conexion);
     }
 
-    function logout(){
-      session_destroy();
-      $_SESSION['tipouser']=0;
-    }
+
 
     function saludarusuario(){
       $usuario=$_SESSION['nombre'] ;
@@ -102,11 +99,22 @@ require("funcionconection.php");
         return $row;
     }
 
+    function getfotocurso($idcurso){
+      $con = conexion("academiatfg");
+      $consulta = "select foto from curso where idcurso = '$idcurso'";
+      $query = mysqli_query($con,$consulta);
+      $row=mysqli_fetch_row($query);
+      $resultado=$row[0];
+      return $resultado;
+      mysqli_close($con);
+    }
+
     function arrayalumno($idalumno){
 
         $con = conexion("academiatfg");
         $consulta = "select  nombre, estudios, id_Estudiante from alumno where Usuarios_idUsuarios= $idalumno";
-        $row=mysqli_fetch_row($consulta);
+        $query = mysqli_query($con,$consulta);
+        $row=mysqli_fetch_row($query);
         mysqli_close($con);
 
         return $row;
@@ -120,11 +128,29 @@ require("funcionconection.php");
     function sesioncurso($variableURI){
       switch ($variableURI) {
         case '/TFG/pages/Cursos/Patronaje/Principal.php':
-        $_SESSION['idpagina']=1;
+        $_SESSION['idpagina']=2;
           break;
           case '/TFG/pages/Cursos/Patronaje/videos.php':
-          $_SESSION['idpagina']=1;
+          $_SESSION['idpagina']=2;
             break;
+            case '/TFG/pages/Cursos/Diseno/Principal.php':
+            $_SESSION['idpagina']=2;
+              break;
+            case '/TFG/pages/Cursos/Diseno/videos.php':
+            $_SESSION['idpagina']=1;
+              break;
+              case '/TFG/pages/Cursos/Modelaje/Principal.php':
+              $_SESSION['idpagina']=3;
+                break;
+              case '/TFG/pages/Cursos/Modelaje/videos.php':
+              $_SESSION['idpagina']=3;
+                break;
+                case '/TFG/pages/Cursos/CorteYConfeccion/Principal.php':
+                $_SESSION['idpagina']=4;
+                  break;
+                case '/TFG/pages/Cursos/CorteYConfeccion/videos.php':
+                $_SESSION['idpagina']=4;
+                  break;
           default:
             $_SESSION['idpagina']=0;
             break;

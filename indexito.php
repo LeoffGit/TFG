@@ -25,7 +25,12 @@ if(isset($_POST['logmail'])){
    <link rel="stylesheet" href="css/font-awesome.css">
    <link rel="stylesheet" type="text-css" href="css/bootstrap-social.scss">
    <link rel="stylesheet" href="css/master.css">
-
+   <style media="screen">
+     .botomito{
+       position: fixed;
+       bottom: 0;
+     }
+   </style>
    <title>TFG</title>
 
  </head>
@@ -40,7 +45,7 @@ if(isset($_POST['logmail'])){
                         <h5 class="card-title">Patronaje</h5>
                         <p class="card-text">Aqui iria una breve explicacion de lo que trata el curso y de los contenidos y
                         aprendizajes que se llevan acabo en el.</p>
-                        <button class="boton-cards">Ir al curso</button>
+                        <a href="pages/Cursos/Patronaje/Principal.php"><button class="boton-cards">Ir al curso</button></a>
                     </div>
                 </div>
             </div>
@@ -52,7 +57,7 @@ if(isset($_POST['logmail'])){
                         <h5 class="card-title">Diseño de moda</h5>
                         <p class="card-text">Aqui iria una breve explicacion de lo que trata el curso y de los contenidos y
                         aprendizajes que se llevan acabo en el.</p>
-                        <button class="boton-cards">Ir al curso</button>
+                        <a href="pages/Cursos/Diseno/Principal.php"><button class="boton-cards">Ir al curso</button></a>
                     </div>
                 </div>
             </div>
@@ -60,10 +65,10 @@ if(isset($_POST['logmail'])){
                 <div class="card">
                     <img src="images/logo2.jpg" class="card-img-top" alt="foto">
                     <div class="card-body">
-                        <h5 class="card-title">Corte y Confeccion</h5>
+                        <h5 class="card-title">Corte y Confección</h5>
                         <p class="card-text">Aqui iria una breve explicacion de lo que trata el curso y de los contenidos y
                         aprendizajes que se llevan acabo en el.</p>
-                        <button class="boton-cards">Ir al curso</button>
+                        <a href="pages/Cursos/CorteYConfeccion/Principal.php"><button class="boton-cards">Ir al curso</button></a>
                     </div>
                 </div>
             </div>
@@ -74,7 +79,7 @@ if(isset($_POST['logmail'])){
                         <h5 class="card-title">Modelaje</h5>
                         <p class="card-text">Aqui iria una breve explicacion de lo que trata el curso y de los contenidos y
                         aprendizajes que se llevan acabo en el.</p>
-                        <button class="boton-cards">Ir al curso</button>
+                        <a href="pages/Cursos/Modelaje/Principal.php"><button class="boton-cards">Ir al curso</button></a>
                     </div>
                 </div>
             </div>

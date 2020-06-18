@@ -49,7 +49,12 @@ nav {
   text-align: center;
 }
 
+.page-container{
+   min-height:100%;
+   position:relative;
+   margin:0px;
 
+}
 .botomito {
   margin-top: 2%;
 
