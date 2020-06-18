@@ -1,77 +1,45 @@
--- phpMyAdmin SQL Dump
--- version 4.8.5
--- https://www.phpmyadmin.net/
---
--- Servidor: 127.0.0.1:3306
--- Tiempo de generación: 18-06-2020 a las 16:54:53
--- Versión del servidor: 5.7.26
--- Versión de PHP: 7.0.33
+CREATE DATABASE academiatfg;
+USE academiatfg;
 
-SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
-START TRANSACTION;
-SET time_zone = "+00:00";
-
-
-/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
-/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8mb4 */;
-
---
--- Base de datos: `academiatfg`
---
-
--- --------------------------------------------------------
-
---
--- Estructura de tabla para la tabla `alumno`
---
-
-DROP TABLE IF EXISTS `alumno`;
-CREATE TABLE IF NOT EXISTS `alumno` (
-  `id_Estudiante` int(11) NOT NULL AUTO_INCREMENT,
-  `Usuarios_idUsuarios` int(45) NOT NULL,
-  `estudios` varchar(45) NOT NULL,
-  `nombre` varchar(45) NOT NULL,
-  PRIMARY KEY (`id_Estudiante`),
-  KEY `Usuarios_IdUsuarios` (`Usuarios_idUsuarios`)
+DROP TABLE IF EXISTS alumno;
+CREATE TABLE IF NOT EXISTS alumno (
+  id_Estudiante int(11) NOT NULL AUTO_INCREMENT,
+  Usuarios_idUsuarios int(45) NOT NULL,
+  estudios varchar(45) NOT NULL,
+  nombre varchar(45) NOT NULL,
+  PRIMARY KEY (id_Estudiante),
+  KEY Usuarios_IdUsuarios (Usuarios_idUsuarios)
 ) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 
---
--- Volcado de datos para la tabla `alumno`
---
 
-INSERT INTO `alumno` (`id_Estudiante`, `Usuarios_idUsuarios`, `estudios`, `nombre`) VALUES
+
+INSERT INTO alumno (id_Estudiante, Usuarios_idUsuarios, estudios, nombre) VALUES
 (1, 0, 'Pocos', 'pepin'),
 (2, 21, 'muchos', 'Carmen Aria'),
 (3, 22, 'pocos', 'Leon'),
 (4, 23, 'Los mios', 'Yo mismo');
 
--- --------------------------------------------------------
 
---
--- Estructura de tabla para la tabla `comentarios`
---
 
-DROP TABLE IF EXISTS `comentarios`;
-CREATE TABLE IF NOT EXISTS `comentarios` (
-  `idComentarios` int(11) NOT NULL AUTO_INCREMENT,
-  `curso_idcurso` int(11) NOT NULL,
-  `comentario` varchar(45) NOT NULL,
-  `respuesta` varchar(45) NOT NULL DEFAULT '0',
-  `fecha` datetime NOT NULL,
-  `Usuarios_idUsuarios` int(11) NOT NULL,
-  PRIMARY KEY (`idComentarios`,`curso_idcurso`),
-  KEY `curso_idcurso` (`curso_idcurso`),
-  KEY `Usuarios_idUsuarios` (`Usuarios_idUsuarios`)
+
+
+DROP TABLE IF EXISTS comentarios;
+CREATE TABLE IF NOT EXISTS comentarios (
+  idComentarios int(11) NOT NULL AUTO_INCREMENT,
+  curso_idcurso int(11) NOT NULL,
+  comentario varchar(45) NOT NULL,
+  respuesta varchar(45) NOT NULL DEFAULT '0',
+  fecha datetime NOT NULL,
+  Usuarios_idUsuarios int(11) NOT NULL,
+  PRIMARY KEY (idComentarios,curso_idcurso),
+  KEY curso_idcurso (curso_idcurso),
+  KEY Usuarios_idUsuarios (Usuarios_idUsuarios)
 ) ENGINE=MyISAM AUTO_INCREMENT=27 DEFAULT CHARSET=utf8;
 
---
--- Volcado de datos para la tabla `comentarios`
---
 
-INSERT INTO `comentarios` (`idComentarios`, `curso_idcurso`, `comentario`, `respuesta`, `fecha`, `Usuarios_idUsuarios`) VALUES
+
+
+INSERT INTO comentarios (idComentarios, curso_idcurso, comentario, respuesta, fecha, Usuarios_idUsuarios) VALUES
 (1, 1, ' Hola soy pepesito', '0', '2020-06-12 21:44:40', 1),
 (2, 1, ' Putos', '0', '2020-06-12 21:44:48', 1),
 (3, 1, ' ASDASDFIHDGHDSGHSDHJSDFSHDFJHSF', '0', '2020-06-12 21:45:02', 1),
@@ -99,57 +67,43 @@ INSERT INTO `comentarios` (`idComentarios`, `curso_idcurso`, `comentario`, `resp
 (25, 4, ' ', '0', '2020-06-18 05:32:55', 22),
 (26, 2, ' Hola me gusta este curso', '0', '2020-06-18 05:45:01', 22);
 
--- --------------------------------------------------------
 
---
--- Estructura de tabla para la tabla `curso`
---
-
-DROP TABLE IF EXISTS `curso`;
-CREATE TABLE IF NOT EXISTS `curso` (
-  `idcurso` int(11) NOT NULL AUTO_INCREMENT,
-  `Profesor_Usuarios_idUsuarios` int(11) NOT NULL,
-  `nombre` varchar(45) NOT NULL,
-  `precio` decimal(3,0) NOT NULL,
-  `duracion` decimal(4,0) NOT NULL,
-  `descripcion` text NOT NULL,
-  `foto` varchar(45) NOT NULL,
-  `lecciones` int(11) NOT NULL,
-  `valoracion` int(11) NOT NULL,
-  PRIMARY KEY (`idcurso`),
-  KEY `Profesor_Usuarios_idUsuarios` (`Profesor_Usuarios_idUsuarios`)
+DROP TABLE IF EXISTS curso;
+CREATE TABLE IF NOT EXISTS curso (
+  idcurso int(11) NOT NULL AUTO_INCREMENT,
+  Profesor_Usuarios_idUsuarios int(11) NOT NULL,
+  nombre varchar(45) NOT NULL,
+  precio decimal(3,0) NOT NULL,
+  duracion decimal(4,0) NOT NULL,
+  descripcion text NOT NULL,
+  foto varchar(45) NOT NULL,
+  lecciones int(11) NOT NULL,
+  valoracion int(11) NOT NULL,
+  PRIMARY KEY (idcurso),
+  KEY Profesor_Usuarios_idUsuarios (Profesor_Usuarios_idUsuarios)
 ) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 
---
--- Volcado de datos para la tabla `curso`
---
 
-INSERT INTO `curso` (`idcurso`, `Profesor_Usuarios_idUsuarios`, `nombre`, `precio`, `duracion`, `descripcion`, `foto`, `lecciones`, `valoracion`) VALUES
+INSERT INTO curso (idcurso, Profesor_Usuarios_idUsuarios, nombre, precio, duracion, descripcion, foto, lecciones, valoracion) VALUES
 (1, 1, 'Diseño', '0', '10', 'spkfjbrkgzdoigzfigzlhgbhfzsgzgzduhghozifdgohzghzohgxdoihgxhioghxozrlgr', 'Diseno', 5, 10),
 (2, 1, 'Patronaje', '0', '6', 'asdasdasdasdaas', 'Patronaje', 6, 10),
 (3, 1, 'Modelaje', '0', '10', 'jdkfgldhkfgldhgjfhgfdghdigkhdghzkhgdkgzdkhlgzkhjkklhgktzhkgdhkgzdkhblghgxkldbklxdkbxkblxblkh', 'Modelaje', 8, 10),
 (4, 1, 'Corte y confección', '0', '14', 'kjsgklrgiohdssghjhvrthmiohuohstuvmouoityvgowyitmongiysmiuoziyr yo ieiyvanger y n iungiyn nng', 'CorteYConfeccion', 10, 10);
 
--- --------------------------------------------------------
 
---
--- Estructura de tabla para la tabla `cursos_adquiridos`
---
 
-DROP TABLE IF EXISTS `cursos_adquiridos`;
-CREATE TABLE IF NOT EXISTS `cursos_adquiridos` (
-  `Alumno_Usuarios_idUsuarios` int(11) NOT NULL,
-  `curso_idcurso` int(11) NOT NULL,
-  PRIMARY KEY (`Alumno_Usuarios_idUsuarios`,`curso_idcurso`),
-  KEY `curso_idcurso` (`curso_idcurso`),
-  KEY `Alumno_Usuarios_idUsuarios` (`Alumno_Usuarios_idUsuarios`)
+DROP TABLE IF EXISTS cursos_adquiridos;
+CREATE TABLE IF NOT EXISTS cursos_adquiridos (
+  Alumno_Usuarios_idUsuarios int(11) NOT NULL,
+  curso_idcurso int(11) NOT NULL,
+  PRIMARY KEY (Alumno_Usuarios_idUsuarios,curso_idcurso),
+  KEY curso_idcurso (curso_idcurso),
+  KEY Alumno_Usuarios_idUsuarios (Alumno_Usuarios_idUsuarios)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
---
--- Volcado de datos para la tabla `cursos_adquiridos`
---
 
-INSERT INTO `cursos_adquiridos` (`Alumno_Usuarios_idUsuarios`, `curso_idcurso`) VALUES
+
+INSERT INTO cursos_adquiridos (Alumno_Usuarios_idUsuarios, curso_idcurso) VALUES
 (1, 1),
 (2, 1),
 (21, 0),
@@ -159,68 +113,49 @@ INSERT INTO `cursos_adquiridos` (`Alumno_Usuarios_idUsuarios`, `curso_idcurso`) 
 (22, 2),
 (22, 4);
 
--- --------------------------------------------------------
 
---
--- Estructura de tabla para la tabla `factura`
---
-
-DROP TABLE IF EXISTS `factura`;
-CREATE TABLE IF NOT EXISTS `factura` (
-  `fecha_compra` datetime NOT NULL,
-  `precio` decimal(3,0) NOT NULL,
-  `cursos_adquiridos_Alumno_Usuarios_idUsuarios` int(11) NOT NULL,
-  `cursos_adquiridos_curso_idcurso` int(11) NOT NULL,
-  `cursos_adquiridos_curso_Profesor_Usuarios_idUsuarios` int(11) NOT NULL,
-  KEY `cursos_adquiridos_Alumno_Usuarios_idUsuarios` (`cursos_adquiridos_Alumno_Usuarios_idUsuarios`,`cursos_adquiridos_curso_idcurso`,`cursos_adquiridos_curso_Profesor_Usuarios_idUsuarios`)
+DROP TABLE IF EXISTS factura;
+CREATE TABLE IF NOT EXISTS factura (
+  fecha_compra datetime NOT NULL,
+  precio decimal(3,0) NOT NULL,
+  cursos_adquiridos_Alumno_Usuarios_idUsuarios int(11) NOT NULL,
+  cursos_adquiridos_curso_idcurso int(11) NOT NULL,
+  cursos_adquiridos_curso_Profesor_Usuarios_idUsuarios int(11) NOT NULL,
+  KEY cursos_adquiridos_Alumno_Usuarios_idUsuarios (cursos_adquiridos_Alumno_Usuarios_idUsuarios,cursos_adquiridos_curso_idcurso,cursos_adquiridos_curso_Profesor_Usuarios_idUsuarios)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
--- --------------------------------------------------------
 
---
--- Estructura de tabla para la tabla `profesor`
---
 
-DROP TABLE IF EXISTS `profesor`;
-CREATE TABLE IF NOT EXISTS `profesor` (
-  `idProfesor` int(11) NOT NULL AUTO_INCREMENT,
-  `Usuarios_idUsuarios` int(45) NOT NULL,
-  `valoracion` int(11) NOT NULL,
-  `foto` varchar(45) NOT NULL,
-  `especialidad` varchar(45) NOT NULL,
-  `nombre` varchar(45) NOT NULL,
-  PRIMARY KEY (`idProfesor`),
-  KEY `Usuarios_IdUsuarios` (`Usuarios_idUsuarios`)
+DROP TABLE IF EXISTS profesor;
+CREATE TABLE IF NOT EXISTS profesor (
+  idProfesor int(11) NOT NULL AUTO_INCREMENT,
+  Usuarios_idUsuarios int(45) NOT NULL,
+  valoracion int(11) NOT NULL,
+  foto varchar(45) NOT NULL,
+  especialidad varchar(45) NOT NULL,
+  nombre varchar(45) NOT NULL,
+  PRIMARY KEY (idProfesor),
+  KEY Usuarios_IdUsuarios (Usuarios_idUsuarios)
 ) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
---
--- Volcado de datos para la tabla `profesor`
---
 
-INSERT INTO `profesor` (`idProfesor`, `Usuarios_idUsuarios`, `valoracion`, `foto`, `especialidad`, `nombre`) VALUES
+
+INSERT INTO profesor (idProfesor, Usuarios_idUsuarios, valoracion, foto, especialidad, nombre) VALUES
 (1, 0, 10, 'foo', 'calipos', 'pepesito');
 
--- --------------------------------------------------------
 
---
--- Estructura de tabla para la tabla `usuarios`
---
-
-DROP TABLE IF EXISTS `usuarios`;
-CREATE TABLE IF NOT EXISTS `usuarios` (
-  `idUsuarios` int(11) NOT NULL AUTO_INCREMENT,
-  `nombre` varchar(45) NOT NULL,
-  `foto` varchar(45) NOT NULL,
-  `email` varchar(45) NOT NULL,
-  `contrasena` varchar(60) NOT NULL,
-  PRIMARY KEY (`idUsuarios`)
+DROP TABLE IF EXISTS usuarios;
+CREATE TABLE IF NOT EXISTS usuarios (
+  idUsuarios int(11) NOT NULL AUTO_INCREMENT,
+  nombre varchar(45) NOT NULL,
+  foto varchar(45) NOT NULL,
+  email varchar(45) NOT NULL,
+  contrasena varchar(60) NOT NULL,
+  PRIMARY KEY (idUsuarios)
 ) ENGINE=MyISAM AUTO_INCREMENT=24 DEFAULT CHARSET=utf8;
 
---
--- Volcado de datos para la tabla `usuarios`
---
 
-INSERT INTO `usuarios` (`idUsuarios`, `nombre`, `foto`, `email`, `contrasena`) VALUES
+INSERT INTO usuarios (idUsuarios, nombre, foto, email, contrasena) VALUES
 (1, 'pepesito', 'profesor.png', 'pepe@gmail.com', '$2y$10$Thu/ErUnl7AN8.uxt/1tEeYAmlbNBCSN/InYkg8eGK97NVLXAuN/W'),
 (2, 'pepin', 'alumno.png', 'pepin@gmail.com', '$2y$10$iZ7NZU2LxyULqNEk7VRtzebD9X4JGPoLDv6LTSvhYEs7/clO4U1j2'),
 (21, 'Carmen Aria', 'alumno.png', 'carmen@gmail.com', '$2y$10$VqCMVDmXPiN75WKOQh2KVOBWYkY46VN1EbYz4wUrBu12Uah8lWHIa'),
@@ -228,6 +163,3 @@ INSERT INTO `usuarios` (`idUsuarios`, `nombre`, `foto`, `email`, `contrasena`) V
 (23, 'Yo mismo', 'alumno.png', 'yo@gmail.com', '$2y$10$Xwjz0XYUhFWLrjLiKvQWVetp969XcfcVctz.vGN27J6lOUAXDaz3q');
 COMMIT;
 
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
