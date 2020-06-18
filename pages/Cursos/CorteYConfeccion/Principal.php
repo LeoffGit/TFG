@@ -31,7 +31,13 @@ $foto=getfotocurso($_SESSION['idpagina']);
    <link rel="stylesheet" href="../../../css/master.css">
 
    <title>TFG</title>
-
+<style>
+.ulita {
+  -webkit-column-count: 1;
+  -moz-column-count: 1;
+  column-count: 1;
+}
+</style>
  </head>
 
  <body>
@@ -72,32 +78,19 @@ $foto=getfotocurso($_SESSION['idpagina']);
             <div class="jumbotron text-white shadow ">
               <h2 class="display-5">Requisitos</h2>
               <ul class="ulita">
-                <li>requisitos</li>
-                <li>requisitos</li>
-                <li>requisitos</li>
-                <li>requisitos</li>
-                <li>requisitos</li>
-                <li>requisitos</li>
-                <li>requisitos</li>
-                <li>requisitos</li>
-                <li>requisitos</li>
-                <li>requisitos</li>
-                <li>requisitos</li>
-                <li>requisitos</li>
+                <li>No requiere ningun conocimiento previo sobre el mundo textil</li>
+                <li>Un PC/Laptop con Windows, Linux o Mac</li>
+                <li>Kit básico de costura (tijeras, cinta métrica, alfileres y agujas)</li>
+                <li>Maquina de coser</li>
+                <li>Tela</li>
               </ul>
               <hr class="my-4">
               <h2 class="display-5">Descripcion</h2>
               <p class="">
-                Suspendisse at malesuada elit. Nulla ullamcorper sit amet odio sed pellentesque. Donec commodo a mauris nec cursus. Sed porttitor turpis vitae odio iaculis, in fringilla nisl mattis. Morbi nibh magna, euismod vitae commodo eget,
-                molestie quis metus. Duis id urna quis purus vehicula feugiat at vitae nisl. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
-
-                Cras scelerisque purus libero, eget porta ante sagittis sit amet. Etiam aliquet vel risus aliquet aliquam. Suspendisse sagittis efficitur est, viverra suscipit leo dapibus id. Vestibulum pretium augue at tellus gravida, quis aliquet
-                ante ultricies. Fusce ut augue eget libero posuere dignissim a vitae orci. Nunc in tincidunt justo, non rutrum justo. Sed et maximus felis, in aliquet libero. Aenean quis luctus dui. In molestie mattis ullamcorper. Sed tincidunt
-                tellus vitae nibh ultrices dictum. Sed a neque et mi dignissim accumsan. Integer vulputate a orci laoreet rhoncus.
-
-                Donec dictum diam turpis, et vulputate dui venenatis nec. Aliquam venenatis sagittis enim ac viverra. Integer finibus enim sit amet ligula maximus, a imperdiet ipsum rutrum. Donec pretium eu quam ut ultricies. Nulla vitae risus porta,
-                finibus felis vitae, luctus justo. Pellentesque volutpat, lorem a commodo aliquet, magna ligula volutpat ante, ut viverra eros orci eget erat. Ut vestibulum tristique lorem, eget aliquam leo pulvinar pulvinar.
-                m sed justo. Nam sed sem consequat, suscipit leo vel, sodales libero. Vivamus vehicula eu leo at maximus. Nullam ut iaculis quam. Aenean vel fermentum odio. Morbi scelerisque bibendum leo ut interdum.
+              En este curso aprenderás el arte y el oficio de corte y confección. Para realizar este curso, no necesitas tener ningún conocimiento previo, todo te será explicado desde cero, de manera muy sencilla y paso a paso…
+              Aprenderás como crear tu taller, los tipos de maquinas que necesita, las herramientas y materiales indispensables.
+              Podrás ver como tomar las decisiones correctas para escoger telas e hilos.
+              por ultimo aprenderás y recibirás practicas básicas para realizar puntadas a mano y costuras de todo tipo con maquina.
               </p>
             </div>
           </div>
@@ -157,7 +150,7 @@ $foto=getfotocurso($_SESSION['idpagina']);
         </div>
         <div class="col-sm-4">
           <div class="card shadow sticky-top">
-            <img src="../../../images/cursos/<?php echo $foto; ?>/logocurso.jpg" class="card-img-top " alt="foto">
+            <img src="../../../images/cursos/<?php echo $foto; ?>/carrusel1.jpg" class="card-img-top " alt="foto">
             <div class="card-body text-white">
               <form class="" action="" method="post">
                 <?php if(isset($_SESSION['id_usuario'])){ ?>

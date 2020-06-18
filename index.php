@@ -40,7 +40,7 @@ if(isset($_POST['logmail'])){
         <div class="row" id="contenido">
             <div class="col-sm-3">
                 <div class="card">
-                    <img src="images/logo2.jpg" class="card-img-top" alt="foto">
+                    <img src="images/cursos/Patronaje/carrusel3.jpg" class="card-img-top" alt="foto">
                     <div class="card-body">
                         <h5 class="card-title">Patronaje</h5>
                         <p class="card-text">Si te apasiona el mundo de la moda el ciclo de Patronaje y moda es el apropiado para tí. Controla todo el proceso creativo para poder confeccionar colecciones, desde el diseño de las prendas.</p>
@@ -51,7 +51,7 @@ if(isset($_POST['logmail'])){
 
             <div class="col-sm-3">
                 <div class="card">
-                    <img src="images/logo2.jpg" class="card-img-top" alt="foto">
+                    <img src="images/cursos/Patronaje/diseño.jpg" class="card-img-top" alt="foto">
                     <div class="card-body">
                         <h5 class="card-title">Diseño de moda</h5>
                         <p class="card-text">El curso de Diseño de Moda sigue un hilo conductor progresivo a partir del concepto “diseño”, que permitirá aprender a seleccionar y trabajar el tejido más adecuado para cada diseño.</p>
@@ -61,7 +61,7 @@ if(isset($_POST['logmail'])){
             </div>
             <div class="col-sm-3">
                 <div class="card">
-                    <img src="images/logo2.jpg" class="card-img-top" alt="foto">
+                    <img src="images/cursos/CorteYConfeccion/carrusel1.jpg" class="card-img-top" alt="foto">
                     <div class="card-body">
                         <h5 class="card-title">Corte y Confección</h5>
                         <p class="card-text">Dentro de la parte de confección, manejarás las diferentes técnicas de puntadas a mano y a máquina y aprenderás los diferentes métodos de corte y colocación del patrón sobre el tejido.</p>
@@ -71,11 +71,10 @@ if(isset($_POST['logmail'])){
             </div>
             <div class="col-sm-3">
                 <div class="card">
-                    <img src="images/logo2.jpg" class="card-img-top" alt="foto">
+                    <img src="images/cursos/Modelaje/carrusel2.jpg" class="card-img-top" alt="foto">
                     <div class="card-body">
                         <h5 class="card-title">Modelaje</h5>
-                        <p class="card-text">Aqui iria una breve explicacion de lo que trata el curso y de los contenidos y
-                        aprendizajes que se llevan acabo en el.</p>
+                        <p class="card-text">El modelaje (o moulage) es una técnica de diseño de moda que permite construir la prenda directamente sobre el cuerpo de la persona o sobre un maniquí para posteriormente obtener un patrón.</p>
                         <a href="pages/Cursos/Modelaje/Principal.php"><button class="boton-cards">Ir al curso</button></a>
                     </div>
                 </div>

@@ -31,7 +31,13 @@ $foto=getfotocurso($_SESSION['idpagina']);
    <link rel="stylesheet" href="../../../css/master.css">
 
    <title>TFG</title>
-
+   <style>
+.ulita {
+  -webkit-column-count: 1;
+  -moz-column-count: 1;
+  column-count: 1;
+}
+</style>
  </head>
 
  <body>
@@ -72,32 +78,18 @@ $foto=getfotocurso($_SESSION['idpagina']);
             <div class="jumbotron text-white shadow ">
               <h2 class="display-5">Requisitos</h2>
               <ul class="ulita">
-                <li>requisitos</li>
-                <li>requisitos</li>
-                <li>requisitos</li>
-                <li>requisitos</li>
-                <li>requisitos</li>
-                <li>requisitos</li>
-                <li>requisitos</li>
-                <li>requisitos</li>
-                <li>requisitos</li>
-                <li>requisitos</li>
-                <li>requisitos</li>
-                <li>requisitos</li>
+                <li>No requiere ningun conocimiento previo sobre el mundo textil</li>
+                <li>Un PC/Laptop con Windows, Linux o Mac</li>
+                <li>5 m. de lienzo o retor</li>
+                <li>Regla (60 cms aprox), escuadra y plantilla de curvas</li>
+                <li>3 rotuladores permanentes de ancho medio de colores distintos</li>
+                <li>Kit básico de costura (tijeras, cinta métrica, alfileres y agujas)</li>
+                <li>2 m. de papel kraft</li>
               </ul>
               <hr class="my-4">
               <h2 class="display-5">Descripcion</h2>
               <p class="">
-                Suspendisse at malesuada elit. Nulla ullamcorper sit amet odio sed pellentesque. Donec commodo a mauris nec cursus. Sed porttitor turpis vitae odio iaculis, in fringilla nisl mattis. Morbi nibh magna, euismod vitae commodo eget,
-                molestie quis metus. Duis id urna quis purus vehicula feugiat at vitae nisl. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
-
-                Cras scelerisque purus libero, eget porta ante sagittis sit amet. Etiam aliquet vel risus aliquet aliquam. Suspendisse sagittis efficitur est, viverra suscipit leo dapibus id. Vestibulum pretium augue at tellus gravida, quis aliquet
-                ante ultricies. Fusce ut augue eget libero posuere dignissim a vitae orci. Nunc in tincidunt justo, non rutrum justo. Sed et maximus felis, in aliquet libero. Aenean quis luctus dui. In molestie mattis ullamcorper. Sed tincidunt
-                tellus vitae nibh ultrices dictum. Sed a neque et mi dignissim accumsan. Integer vulputate a orci laoreet rhoncus.
-
-                Donec dictum diam turpis, et vulputate dui venenatis nec. Aliquam venenatis sagittis enim ac viverra. Integer finibus enim sit amet ligula maximus, a imperdiet ipsum rutrum. Donec pretium eu quam ut ultricies. Nulla vitae risus porta,
-                finibus felis vitae, luctus justo. Pellentesque volutpat, lorem a commodo aliquet, magna ligula volutpat ante, ut viverra eros orci eget erat. Ut vestibulum tristique lorem, eget aliquam leo pulvinar pulvinar.
-                m sed justo. Nam sed sem consequat, suscipit leo vel, sodales libero. Vivamus vehicula eu leo at maximus. Nullam ut iaculis quam. Aenean vel fermentum odio. Morbi scelerisque bibendum leo ut interdum.
+              El modelaje (o moulage) es una técnica de diseño de moda que permite construir la prenda directamente sobre el cuerpo de la persona o sobre un maniquí para posteriormente obtener un patrón. Frente al método habitual (en el que se crea primero un patrón plano que se lleva después a una forma tridimensional en tejido), con el modelaje se invierte el proceso de trabajo: se comienza por modelar la prenda en tejido para posteriormente desarrollar el patrón en plano, directamente sobre la tela. Esto da pie a una mayor experimentación con el volumen y el tejido durante el proceso de ideación de la prenda. En este curso aprenderás la técnica del modelaje sobre maniquí y conocerás sus posibilidades creativas de cara al diseño y la construcción de prendas de moda.
               </p>
             </div>
           </div>
@@ -157,7 +149,7 @@ $foto=getfotocurso($_SESSION['idpagina']);
         </div>
         <div class="col-sm-4">
           <div class="card shadow sticky-top">
-            <img src="../../../images/cursos/<?php echo $foto; ?>/logocurso.jpg" class="card-img-top " alt="foto">
+            <img src="../../../images/cursos/<?php echo $foto; ?>/carrusel2.jpg" class="card-img-top " alt="foto">
             <div class="card-body text-white">
               <form class="" action="" method="post">
                 <?php if(isset($_SESSION['id_usuario'])){ ?>
