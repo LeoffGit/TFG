@@ -86,8 +86,8 @@ $foto=getfotocurso($_SESSION['idpagina']);
               <hr class="my-4">
               <h2 class="display-5">Descripcion</h2>
               <p class="">
-              En este curso aprenderás las características de cada uno de los elementos básicos del diseño de modas mas utilizados en la creacion de prendas. Podrás descubrir temas de inspiracion para diseñar ropa de manera exitosa! 
-              Los elementos que conoceras son parte integral de todo tipo de diseño incluyendo prendas y textiles.  
+              En este curso aprenderás las características de cada uno de los elementos básicos del diseño de modas mas utilizados en la creacion de prendas. Podrás descubrir temas de inspiracion para diseñar ropa de manera exitosa!
+              Los elementos que conoceras son parte integral de todo tipo de diseño incluyendo prendas y textiles.
               Los elementos que verás en el curso son:
               <ul>
              <li>1.Línea</li>
@@ -165,7 +165,7 @@ $foto=getfotocurso($_SESSION['idpagina']);
               <button type="submit" class="boton-cards" name="adquirir"><?php $esto=checkCurso($_SESSION['id_usuario'],$_SESSION['idpagina']); echo $esto; ?></button>
               <?php linkvid($_SESSION['id_usuario'],$_SESSION['idpagina']); ?>
               <?php } else{
-                echo"<button type='button' class='boton-cards' name='adquirir'>Registrate para adquirir el curso</button>";
+                echo "<a href='/TFG/pages/formulario.html'><button type='button' class='boton-cards' name='adquirir'>Registrate para adquirir el curso</button></a>";
               }
                 ?>
               </form>
