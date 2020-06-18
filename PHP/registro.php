@@ -1,9 +1,8 @@
     <?php
         $nombre=$_POST['nombre'];
         $email=$_POST['email'];
-        $contrasena=$_POST['contrasena'];
         $estudios=$_POST['estudios'];
-
+        $contrasena=password_hash($_POST['contrasena'],PASSWORD_DEFAULT);
         echo "$nombre $email $contrasena $estudios";
         echo "</br>";
      $con = mysqli_connect('localhost', 'root', '', 'academiatfg');

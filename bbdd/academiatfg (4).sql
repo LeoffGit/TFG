@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1:3306
--- Tiempo de generación: 18-06-2020 a las 05:46:41
+-- Tiempo de generación: 18-06-2020 a las 16:54:53
 -- Versión del servidor: 5.7.26
 -- Versión de PHP: 7.0.33
 
@@ -36,7 +36,7 @@ CREATE TABLE IF NOT EXISTS `alumno` (
   `nombre` varchar(45) NOT NULL,
   PRIMARY KEY (`id_Estudiante`),
   KEY `Usuarios_IdUsuarios` (`Usuarios_idUsuarios`)
-) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 
 --
 -- Volcado de datos para la tabla `alumno`
@@ -45,7 +45,8 @@ CREATE TABLE IF NOT EXISTS `alumno` (
 INSERT INTO `alumno` (`id_Estudiante`, `Usuarios_idUsuarios`, `estudios`, `nombre`) VALUES
 (1, 0, 'Pocos', 'pepin'),
 (2, 21, 'muchos', 'Carmen Aria'),
-(3, 22, 'pocos', 'Leon');
+(3, 22, 'pocos', 'Leon'),
+(4, 23, 'Los mios', 'Yo mismo');
 
 -- --------------------------------------------------------
 
@@ -211,19 +212,20 @@ CREATE TABLE IF NOT EXISTS `usuarios` (
   `nombre` varchar(45) NOT NULL,
   `foto` varchar(45) NOT NULL,
   `email` varchar(45) NOT NULL,
-  `contrasena` varchar(45) NOT NULL,
+  `contrasena` varchar(60) NOT NULL,
   PRIMARY KEY (`idUsuarios`)
-) ENGINE=MyISAM AUTO_INCREMENT=23 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=24 DEFAULT CHARSET=utf8;
 
 --
 -- Volcado de datos para la tabla `usuarios`
 --
 
 INSERT INTO `usuarios` (`idUsuarios`, `nombre`, `foto`, `email`, `contrasena`) VALUES
-(1, 'pepesito', 'profesor.png', 'pepe@gmail.com', 'pepe'),
-(2, 'pepin', 'alumno.png', 'pepin@gmail.com', 'pepin'),
-(21, 'Carmen Aria', 'alumno.png', 'carmen@gmail.com', 'carmen'),
-(22, 'Leon', 'alumno.png', 'leon@gmail.com', 'leon');
+(1, 'pepesito', 'profesor.png', 'pepe@gmail.com', '$2y$10$Thu/ErUnl7AN8.uxt/1tEeYAmlbNBCSN/InYkg8eGK97NVLXAuN/W'),
+(2, 'pepin', 'alumno.png', 'pepin@gmail.com', '$2y$10$iZ7NZU2LxyULqNEk7VRtzebD9X4JGPoLDv6LTSvhYEs7/clO4U1j2'),
+(21, 'Carmen Aria', 'alumno.png', 'carmen@gmail.com', '$2y$10$VqCMVDmXPiN75WKOQh2KVOBWYkY46VN1EbYz4wUrBu12Uah8lWHIa'),
+(22, 'Leon', 'alumno.png', 'leon@gmail.com', '$2y$10$c17h92WEwKmLa78sLQE5KudU9iI4lpDh5ZihoN8zH.vAFGT2qMpna'),
+(23, 'Yo mismo', 'alumno.png', 'yo@gmail.com', '$2y$10$Xwjz0XYUhFWLrjLiKvQWVetp969XcfcVctz.vGN27J6lOUAXDaz3q');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

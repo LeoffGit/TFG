@@ -9,7 +9,6 @@ if(isset($_POST['adquirir'])){
   adquirircurso($_SESSION['id_usuario'],$_SESSION['idpagina']);
 }
 $foto=getfotocurso($_SESSION['idpagina']);
-
  ?>
  <!doctype html>
 
@@ -73,10 +72,10 @@ $foto=getfotocurso($_SESSION['idpagina']);
             <div class="jumbotron text-white shadow ">
               <h2 class="display-5">Requisitos</h2>
               <ul class="ulita">
-                <li><?php echo $_SESSION['tipouser'] ?></li>
-                <li><?php echo $_SESSION['id_usuario'] ?></li>
-                <li><?php echo $_SESSION['nombre'] ?></li>
-                <li><?php echo $_SESSION['email'] ?></li>
+                <li>requisitos</li>
+                <li>requisitos</li>
+                <li>requisitos</li>
+                <li>requisitos</li>
                 <li>requisitos</li>
                 <li>requisitos</li>
                 <li>requisitos</li>
@@ -160,11 +159,15 @@ $foto=getfotocurso($_SESSION['idpagina']);
           <div class="card shadow sticky-top">
             <img src="../../../images/cursos/<?php echo $foto; ?>/logocurso.jpg" class="card-img-top " alt="foto">
             <div class="card-body text-white">
-              <h5 class="card-title">Patronaje</h5>
               <form class="" action="" method="post">
+                <?php if(isset($_SESSION['id_usuario'])){ ?>
               <button type="submit" class="boton-cards" name="adquirir"><?php $esto=checkCurso($_SESSION['id_usuario'],$_SESSION['idpagina']); echo $esto; ?></button>
-              </form>
               <?php linkvid($_SESSION['id_usuario'],$_SESSION['idpagina']); ?>
+              <?php } else{
+                echo"<button type='button' class='boton-cards' name='adquirir'>Registrate para adquirir el curso</button>";
+              }
+                ?>
+              </form>
               <br><br>
               <p class="card-text">Este curso contiene :</p>
 

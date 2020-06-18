@@ -25,7 +25,7 @@
                       </div>
                       <div class="form-group">
                         <label for="message-text" class="col-form-label">Contraseña:</label>
-                        <input type="text" class="form-control" id="recipient-name" name="logcontrasena">
+                        <input type="password" class="form-control" id="recipient-name" name="logcontrasena">
                       </div>
 
                   </div>

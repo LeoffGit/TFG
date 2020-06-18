@@ -1,36 +1,15 @@
 <?php
 require("funcionconection.php");
-/*    if($conexion = mysqli_connect('localhost', 'root', 'metrica123','academiatfg')){
-        if(isset($_POST['inicio'])) {
-            $email = $_POST['email'];
-            $contrasena = $_POST['contrasena'];
-            $query = mysqli_query($conexion,"select * from usuarios WHERE email = '$email' AND contrasena = '$contrasena'");
-            $contar = mysqli_num_rows($query);
-            if ($contar != 0) {
-                while($row=mysqli_fetch_array($query)) {
-                    if($email == $row['email'] && $contrasena == $row['contrasena']){
-                        $_SESSION['email'] = $email;
-                        $_SESSION['id_usuario'] = $row['id_usuario'];
-                        $_SESSION['nombre'] = $row['nombre'];
-                        echo "<script>window.location.href='prueba.php';</script>";
-                    }
-                }
-            }else { echo "El nombre de usuario y/o contrasena no coinciden"; }
-
-          }
-    }else
-        echo "Conexion fallida";
-*/
     function login(){
         $conexion = conexion("academiatfg");
         $email = $_POST['logmail'];
         $contrasena = $_POST['logcontrasena'];
         //$_SESSION['tipouser'] = 0;
-        $query = mysqli_query($conexion,"select * from usuarios WHERE email = '$email' AND contrasena = '$contrasena'");
+        $query = mysqli_query($conexion,"select * from usuarios WHERE email = '$email'");
         $contar = mysqli_num_rows($query);
         if ($contar != 0){
             $row=mysqli_fetch_array($query);
-                if($email == $row['email'] && $contrasena == $row['contrasena']){
+                if($email == $row['email'] && password_verify($contrasena, $row['contrasena'])){
                     $_SESSION['email'] = $email;
                     $_SESSION['id_usuario'] = $row['idUsuarios'];
                     $_SESSION['nombre'] = $row['nombre'];
