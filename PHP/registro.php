@@ -23,7 +23,7 @@
                echo "$accion2";
                $resultado2 = mysqli_query($con,$accion2);
         if($resultado2){
-            header("Location:/TFG/indexito.php");
+            header("Location:/TFG/index.php");
         }
         }else{
             echo"Error al ingresar el nuevo usuario";

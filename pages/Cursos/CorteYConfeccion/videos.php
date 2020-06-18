@@ -2,7 +2,7 @@
 session_start();
 include "../../../PHP/libreria.php";
 if($_SESSION['tipouser']==0){
-  header('location:/TFG/indexito.php');
+  header('location:/TFG/index.php');
 }
 $url = strtok($_SERVER["REQUEST_URI"],'?');
 sesioncurso($url);

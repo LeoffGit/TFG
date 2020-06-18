@@ -2,7 +2,7 @@
 session_start();
 include "../../PHP/libreria.php";
 if($_SESSION['tipouser']!=2){
-  header('location:/TFG/indexito.php');
+  header('location:/TFG/index.php');
 }
  ?>
  <!doctype html>

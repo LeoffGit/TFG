@@ -4,7 +4,7 @@
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="collapse_menu">
-            <a class="navbar-brand" href="/TFG/indexito.php"><img src="http://localhost/TFG/images/Logo2.png" alt=""></a>
+            <a class="navbar-brand" href="/TFG/index.php"><img src="http://localhost/TFG/images/Logo2.png" alt=""></a>
             <span class="navbar-text" id="titulo">Learning Sewing Desing</span>
             <form class="" action="/TFG/PHP/logout.php" method="get" style="margin-left:auto;margin-right:7%;">
               <p class="text-white"><?php saludarusuario(); ?></p>
