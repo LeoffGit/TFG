@@ -44,7 +44,7 @@ if($_SESSION['tipouser']!=1){
                 <div class="col-sm-1">&nbsp;</div>
         <?php
             $id=$_SESSION['id_usuario'];
-            $conexion = mysqli_connect('localhost', 'root', '', 'academiatfg');
+            $conexion = mysqli_connect('localhost', 'root', 'metrica123', 'academiatfg');
             mysqli_set_charset($conexion, 'utf8');
             $consulta="select nombre from curso c, cursos_adquiridos cu where c.idcurso = cu.curso_idcurso and cu.Alumno_Usuarios_idUsuarios ='$id';";
             $resultado=mysqli_query($conexion,$consulta);
@@ -65,8 +65,8 @@ if($_SESSION['tipouser']!=1){
                                 25%
                             </div>
                         </div>
-                        <a href='paginacurso.html<?php echo $fila[0] ?>'>Seguir viendo</a>
-                        <a href="" class="card-link">Inicio</a>
+                        <a href='../Cursos/<?php echo $fila[0] ?>/Principal.php'>Seguir viendo</a>
+                        <a href='/TFG/index.php' class="card-link">Inicio</a>
                     </div>
                 </div>
             </div>

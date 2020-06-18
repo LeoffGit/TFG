@@ -5,7 +5,7 @@
         $contrasena=password_hash($_POST['contrasena'],PASSWORD_DEFAULT);
         echo "$nombre $email $contrasena $estudios";
         echo "</br>";
-     $con = mysqli_connect('localhost', 'root', '', 'academiatfg');
+     $con = mysqli_connect('localhost', 'root', 'metrica123', 'academiatfg');
             mysqli_set_charset($con, 'utf-8');
             $accion="insert into usuarios (nombre, foto, email, contrasena) values('$nombre','alumno.png','$email','$contrasena')";
             echo "$accion";
